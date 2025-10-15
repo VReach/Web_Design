@@ -9,10 +9,223 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
-    
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a{
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+    .main{
+        width: 100%;
+
+        .info{
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+        .description{
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen{
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1{
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about{
+                        display: flex;
+                        
+                        .img{
+                            width: 20%;
+                            height: 300px;
+                            margin: 0px 10px 20px 20px;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border: 2px solid #333;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        .text{
+                            width: 70%;
+                            margin: 0 auto;
+                            text-align: justify;
+                            font-family: "Suwannaphum", serif;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            
+                        }
+                }
+                .card{
+                    display: flex;
+                    justify-content: space-evenly;
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards{
+                        width: 400px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps{
+                            width: 100%;
+                            height: 200px;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        .text{
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 </style>
 <body>
-    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-    <h1>Welcome to Banteay Meanchey</h1>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Banteay Meanchey</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general"><h1>លក្ខណៈទូទៅ</h1>
+                <div class="about">
+                    <div class="img">
+                        <img src="img/Cambodia_Banteay_Meanchey_locator_map.svg.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>ឋិតនៅចម្ងាយ ៣៥៩ គីឡូម៉ែត្រពីរាជធានីភ្នំពេញតាមផ្លូវជាតិលេខ ០៥ និងមានទីតាំងជាប់នឹងព្រំប្រទល់ខេត្តបាត់ដំបង ខេត្តឧត្ដរមានជ័យ ខេត្តសៀមរាប និង ខេត្តស្រះកែវ ប្រទេសសៀម។ខេត្តបន្ទាយមានជ័យកំពុងទទួលបានភ្ញៀវទេសចរណ៍យ៉ាងច្រើនកុះករតាមរយៈកាស៊ីណូខ្នាតអន្តរជាតិមួយដែលកំពុងបើកឲ្យមានការចូលលេងកម្សាន្តទាំងយប់ទាំងថ្ងៃ។តំបន់កាស៊ីណូនេះក៏មានរៀបចំជាផ្នែកផ្សេងទៀតដូចជា ភោជនីយដ្ឋាន សណ្ឋាគារ ផ្សារលក់ឥវ៉ាន់ផងដែរ។ភ្ញៀវដែលទៅកម្សាន្តនៅទីនោះភាគច្រើនមកពីប្រទេសសៀមនិងប្រទេសចិនឯភ្ញៀវជនជាតិផ្សេងៗទៀតពុំសូវមាននោះទេ។បើចំពោះជនជាតិខ្មែរជាអ្នកទេសចរណ៍សាមញ្ញវិញពួកគេច្រើនទៅដើម្បីកម្សាន្តភ្នែកតែប៉ុណ្ណោះពុំសូវមានអ្នកដែលទៅដើម្បីប្រព្រឹត្តល្បែងស៊ីសងនោះឡើយ។មិនមែនមានតែតំបន់កម្សាន្តច្រកព្រំដែនលក្ខណៈអន្តរជាតិប៉ោយប៉ែតប៉ុណ្ណោះទេដែលភ្ញៀវទេសចរណ៍ចាប់អារម្មណ៍នោះខេត្តបន្ទាយមានជ័យនៅមានតំបន់កម្សាន្តមួយចំនួនទៀតដែលបានទាក់ទាញនិងកំពុងអភិវឌ្ឍដើម្បីទាក់ទាញភ្ញៀវទេសចរណ៍ទៀតផង។</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gen">
+                <a name="tourism"><h1>តំបន់ទេសចរណ៍សក្តានុពល</h1>
+                <div class="card">
+                    <div class="cards">
+                        <div class="temps">
+                            <img src="img/ចំលាក់ប្រាសាទបន្ទាយឆ្មា.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>ប្រាសាទបន្ទាយឆ្មារមានទីតាំងស្ថិតនៅតាមបណ្តោយផ្លូវជាតិលេខ ៥៦A ចម្ងាយប្រមាណ៥៩ គីឡូម៉ែត្រពីទីរួមខេត្តបន្ទាយមានជ័យក្នុងស្រុកថ្មពួកតំបន់រមណីយដ្ឋានប្រវត្តិសាស្ត្រប្រាសាទបន្ទាយឆ្មារបានកសាងឡើងដោយព្រះបាទជ័យវរ្ម័នទី៧ក្នុងចន្លោះសតវត្សទី ១២ និង ១៣។តំបន់នេះត្រូវបានរងនូវការបំផ្លិចបំផ្លាញដោយសារសង្គ្រាមដែលបណ្ដាលឲ្យប្រាសាទមួយចំនួនធំត្រូវបាក់បែកខ្ទេចខ្ទីនៅសល់តែថ្មរាយប៉ាយពាសពេញដីមិនត្រឹមតែប៉ុណ្ណោះនៅមានពួកចោរបានលួចយករូបចម្លាក់ផ្សេងៗពីប្រាសាទទៅលក់ឲ្យពួកឈ្មួញជនជាតិសៀមទៀតផង។ភាពល្បីល្បាញនៃប្រាសាទនេះបានធ្វើឲ្យពីរមួយថ្ងៃទៅមួយថ្ងៃមានអ្នកទេសចរណ៍បរទេសចូលទស្សនាកាន់តែច្រើនឡើងៗដែលសក្ដានុពលនេះបានធ្វើឲ្យអជ្ញាធរគ្រប់គ្រងប្រាសាទមានការចាប់អារម្មណ៍ហើយបានព្យាយាមរៀបចំបណ្ដាប្រាសាទដទៃទៀតនៅក្នុងខេត្តឲ្យកាន់តែគួរឲ្យទាក់ទាញ ជាមួយនឹងការជួសជុលហេដ្ឋារចនាសម្ព័ន្ធផ្លូវថ្នល់ដើម្បីជាភាពងាយស្រួលដល់ទេសចរណ៍ក្នុងការទៅកម្សាន្ត។ប្រាសាទដែលខេត្តនេះមានគម្រោងរៀបចំជួសជុលលម្អឡើងវិញមានដូចជា ប្រាសាទបន្ទាយទ័ព ប្រាសាទព្រះឈរ ប្រាសាទប្រាំជាដើម</p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        
+                    </div>
+                    <div class="cards"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

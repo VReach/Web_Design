@@ -11,6 +11,7 @@
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
   body {
     background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
     background-repeat: no-repeat;
@@ -26,9 +27,11 @@
     font-size: 60px;
     font-family: 'Kh Bokor';
     font-weight: bold;
-    color: white;                  
+    color: white;
     text-align: center;
-}
+    text-shadow: 2px 2px 4px #000000;
+
+  }
 
 
   marquee {
@@ -44,32 +47,101 @@
     text-align: center;
     margin-top: 20px;
   }
-  .click{
+
+  .click {
     width: 100%;
     background-color: #feb47b;
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
+    padding: 10px 0px;
+    border-radius: 5px;
 
-    .users{
-      margin-right: 20px;
+    .users {
       font-size: 24px;
       cursor: pointer;
+      padding: 10px;
+      color: white;
+      
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    .provinces {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 10px;
+      }
+
+      li {
+        margin: 10px 15px;
+        font-size: 20px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          border: 2px solid white;
+          padding: 8px 12px;
+          border-radius: 5px;
+          transition: background-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+          background-color: white;
+          color: #feb47b;
+        }
+      }
     }
   }
 </style>
 
 <body>
   <div class="header">
-    <h1 id="title" class="gradient-text">
+    <h1 id="title">
       ការពិពណ៌នាអំពីខេត្តនីមួយៗ ក្នុងប្រទេសកម្ពុជា
     </h1>
     <marquee>សូមស្វាគមន៍មកកាន់គេហទំព័រ</marquee>
   </div>
   <div class="click">
     <div class="users">
-      <i class="fa-solid fa-user"></i> Contact Us
+      <i class="fa-solid fa-user"></i> <a href="">Contact Us</a>
+      <i class="fa-solid fa-house-user"></i> <a href="index.html">Home Page</a>
     </div>
-    <div class="provinces"></div>
+    <div class="provinces">
+      <ul>
+        <li><a href="pro1.html">Banteay Meanchey</a></li>
+        <li><a href="pro2.html">Oddar Meanchey</a></li>
+        <li><a href="pro3.html">Preah Vihear</a></li>
+        <li><a href="pro4.html">Stung Treng</a></li>
+        <li><a href="pro5.html">Ratanakiri</a></li>
+        <li><a href="pro6.html">Mondulkiri</a></li>
+        <li><a href="pro7.html">Kratie</a></li>
+        <li><a href="pro8.html">Tbong Khmum</a></li>
+        <li><a href="pro9.html">Kampong Cham</a></li>
+        <li><a href="pro10.html">Prey Veng</a></li>
+        <li><a href="pro11.html">Svay Rieng</a></li>
+        <li><a href="pro12.html">Phnom Penh</a></li>
+        <li><a href="pro13.html">Kandal</a></li>
+        <li><a href="pro14.html">Takeo</a></li>
+        <li><a href="pro15.html">Kampot</a></li>
+        <li><a href="pro16.html">Kep</a></li>
+        <li><a href="pro17.html">Sihanoukville</a></li>
+        <li><a href="pro18.html">Koh Kong</a></li>
+        <li><a href="pro19.html">Kampong Speu</a></li>
+        <li><a href="pro20.html">Kampong Chhnang</a></li>
+        <li><a href="pro21.html">Kampong Thom</a></li>
+        <li><a href="pro22.html">Siem Reap</a></li>
+        <li><a href="pro23.html">Battambang</a></li>
+        <li><a href="pro24.html">Pailin</a></li>
+        <li><a href="pro25.html">Pursat</a></li>
+      </ul>
+    </div>
   </div>
   <div class="img">
     <img src="Cambodia_provinces_en.svg.png" alt="" usemap="#image-map">
@@ -131,7 +203,7 @@
       <area target="" alt="Kampong Speu" title="Kampong Speu" href="pro19.html"
         coords="383,766,393,777,394,809,414,840,437,842,462,828,498,839,517,844,526,841,531,795,551,775,547,763,519,762,532,704,543,672,519,675,501,693,458,684,447,667,429,647,431,634,423,628,418,617,400,620,384,646,372,648,366,641,356,647,346,665,324,665,328,676,324,694,329,715,339,726,351,727,361,740,374,739,390,751"
         shape="poly">
-      <area target="" alt="Kampong Chhnang" title="Kampong Chhnang" href="pr020.html"
+      <area target="" alt="Kampong Chhnang" title="Kampong Chhnang" href="pro20.html"
         coords="424,624,434,624,437,633,434,647,446,660,457,680,478,685,497,690,514,672,544,668,561,654,567,636,577,625,573,611,576,575,565,560,577,545,578,537,568,540,569,529,563,524,561,504,546,501,524,493,511,490,492,504,475,507,466,512,466,528,456,535,449,553,437,558,421,563,414,577,413,586"
         shape="poly">
       <area target="" alt="Kampong Thom" title="Kampong Thom" href="pro21.html"
