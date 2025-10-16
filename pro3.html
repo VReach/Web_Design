@@ -1,17 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Preah Vihear</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Preah_Vihear_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តព្រះវិហារ គឺជាខេត្តដែលស្ថិតនៅភាគខាងជើងបំផុតនៃប្រទេសកម្ពុជា
+                                ខេត្តនេះមានផ្ទៃដីធំជាងគេលំដាប់ទី២ និងមានប្រជាជនរស់នៅតិចនៅតំបន់ភ្នំ និងខ្ពង់រាប
+                                ដែលជាខេត្តមានលក្ខណៈវប្បធម៌ប្រវត្តិសាស្ត្រនិងធម្មជាតិ ។
+                                នៅភាគខាងជើងនៃខេត្តជាប់នឹងប្រទេសថៃនិងឡាវ
+                                ដែលបង្កើតជាច្រកអន្តរជាតិសម្រាប់ពាណិជ្ជកម្មនិងទេសចរណ៍។ ខេត្តព្រះវិហារ
+                                គឺជាតំំបន់មួយនៅភាគខាងជើងនៃកម្ពុជាដែលអាចទាក់ទាញភ្ងៀរជាតិនិងអន្តរជាតិជាច្រើនសម្រាប់មកទស្សនាប្រាសាទបុរាណ
+                                និងទេសភាពព្រៃធម្មជាតិ រីឯទីរួមខេត្តព្រះវិហារគឺ ក្រុងព្រះវិហារ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/PRV/1280px-Preah-vihear.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រាសាទព្រះវិហារមានទីតាំងនៅភូមិធម្មជាតិ ឃុំស្រអែម ស្រុកជាំក្សាន្ត នៅលើជួរភ្នំដងរែក
+                                    ជាប់ព្រំប្រទល់អន្តជាតិកម្ពុជានិងប្រទេសថៃ។ ប្រាសាទព្រះវិហារមានចំងាយផ្លូវ
+                                    ៤០០គមពីភ្នំពេញ តាមផ្លូវជាតិលេខ៦២ និង១៥០គមពីទីរួមខេត្តព្រះវិហារ។
+                                    ប្រាសាទព្រះវិហារត្រូវបានកសាងឡើងក្នុងសម័យអង្គរ ដោយព្រះមហាក្សត្រព្រះបាទសូរ្យវរ្ម័នទី១
+                                    នៅក្នុងសតវត្សរ៍ទី១១ និងត្រូវបានកសាងដោយព្រះមហាក្សត្រជាច្រើនអង្គរទៀត។
+                                    ប្រាសាទព្រះវិហារមានឈ្មោះតាមសិវលិង្គនៅក្នុងប្រាសាទដែលមានឈ្មោះថា ស្រី សិខារិស្វរៈ
+                                    ដែលមានន័យថាអំណាចនៃកំពូលភ្នំ។
+                                    សិវលិង្គដែលតម្កល់នៅក្នុងប្រាសាទនេះត្រូវបាននាំយកមកពីប្រាសាទវត្តភូ(ប្រទេសឡាវ)ដើម្បីតម្កល់ទុកនៅក្នុងប្រាសាទនេះ។
+                                    ប្រាសាទព្រះវិហារមានគោបុរៈ(ខ្លោងទ្វារ)ចំនួន៥
+                                    ដែលរៀបចំពីគោបុរៈទី១នៅខាងលើរហូតដល់គោបុរៈទី៥ ប្រាសាទព្រះវិហារបែរមុខទៅទិសខាងជើង។
+                                    ភ្នំនេះមានកំពស់៧៤០ម ធៀបកំពស់ទឹកសមុទ្រ។ ដោយមានផ្ទៃក្រលា៨០០ម៤០០ម
+                                    ចំនោតខ្លាំងពីទឹកដីកម្ពុជានិងរាងទេរទៅរកទឹកដីប្រទេសថៃ។
+                                    ប្រាសាទព្រះវិហារត្រូវបានដាក់បញ្ជូលក្នុងបញ្ជីជាសម្បត្តិបេតិកភណ្ឌពិភពលោកនៅថ្ងៃទី៧ខែកក្កដាឆ្នាំ២០០៨។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/PRV/Web-PreahKhanKampongSvay-101-1024x683.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រាសាទព្រះខ័នកំពង់ស្វាយ(អ្នកស្រុកហៅថា ប្រាសាទបាកាណ)ដែលមានទីតាំងស្ថិតនៅភូមិតាសែង
+                                    ឃុំរណសិរ្ស ស្រុកសង្គមថ្មី នៅជិតព្រំប្រទល់ខេត្តកំពង់ធំនិងសៀមរាប
+                                    ស្ថិតនៅភាគនិរតីចំងាយចំនួន១០៥គម ពីទីរួមខេត្ត។
+                                    ប្រាសាទបាកានមានក្បូរក្បាច់រចនាប្រហាក់ប្រហែលនឹងប្រាសាទអង្គរវត្តដែរតែកសាងមុនពេលលើករាជធានីទៅអង្គរវត្ត។
+                                    ប្រាសាទបាកានមានឈ្មោះដើមហៅថាជ័យស្រីប្រាសាទនេះកសាងដោយព្រះបាទសុរ្យវរ្ម័នទី១ (គស១០០២)
+                                    លើបូជនីយដ្ឋានចាស់របស់ព្រះបាទយសោវរ្ម័នទី១និងមានបន្ថែមរចនាបថមុខ៤ខ្លះដោយព្រះបាទជ័យវរ្ម័នទី៧មុនពេលឡើងគ្រងរាជនៅអង្គរ
+                                    (គស១១៨១)ដែលព្រះអង្គបានកសាងប្រាសាទនេះដើម្បីតំកល់អដ្ឋិធាតុញាតិវង្សនិងព្រះបរមគ្រូរបស់ព្រះអង្គ។
+                                    ប្រាសាទព្រះខ័នកំពង់ស្វាយស្ថិតនៅលើទីតាំងយុទ្ធសាស្រ្តទ័ពដែលមានលក្ខណពិសេសដូចជាមានទឺកព័ន្ធជុំវិញនិងស្ថិតក្បែរប្រាសាទមានកន្លែងស្លដែកសម្រាប់ធ្វើជាអាវុធទៀតផង។
+                                    ប្រាសាទត្រូវបានកសាងដោយព្រះបាទជ័យវរ្ម័នទី៧
+                                    ដើម្បីបង្ហាញពីការឈ្នះចម្បាំងជាមួយប្រទេសចម្ប៉ាផងដែរ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/PRV/Koh_Kae.jpeg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    តំបន់រមណីយដ្ឋានប្រាសាទកោះកែរមានទីតាំងស្ថិតនៅភូមិស្រយ៉ង់ជើងឃុំស្រយ៉ង់ ស្រុកគូលែន
+                                    ដែលស្ថិតនៅជិតព្រំប្រទល់ខេត្តសៀមរាប មានចម្ងាយ៧២គីឡូម៉ែត្រ ពីទីរួមខេត្តព្រះវិហារ។
+                                    ក្រុមប្រាសាទកោះកែរមានប្រាសាទព័ទ្ធជុំវិញចំនួន៣៨ប្រាសាទដែលមានចំងាយពីប្រាសាទមួយទៅប្រាសាទមួយពី២ទៅ៥គម។
+                                    ប្រាសាទកោះកែរត្រូវបានកសាងកសាងឡើងដោយព្រះបាទជ័យវរ្ម័នទី៤ នៅក្នុងឆ្នាំ៩២១ដល់ ៩៤២
+                                    ប្រាសាទនេះស្ថិតនៅ៨០គីឡូម៉ែត្រនៃទិសឥសានអង្គរធំ។
+                                    ប្រាសាទនេះមានលក្ខណៈជាប្រាសាទភ្នំមាន៧ថ្នាក់កំពស់៣៥ម។ តំបន់រមណីយដ្ឋានប្រាសាទកោះកែរ
+                                    ដែលមានឈ្មោះដើមថាឆោគគីតាមរយៈសិលាចារឹកប្រាសាទដំរី។
+                                    រមណីយដ្ឋានប្រាសាទកោះកែរមានប្រាសាទជាច្រើននៅក្នុងនោះមានដូចជា ប្រាសាទធំ ប្រាសាទចិន
+                                    ប្រាសាទដំរី ប្រាសាទលិង្គ ប្រាសាទច្រាប ប្រាសាទក្រចាប់។ល។
+                                    តំបន់រមណីយដ្ឋានប្រាសាទកោះកែរជារាជធានីរបស់ព្រះបាទជ័យវរ្ម័នទី៤
+                                    បន្ទាប់ពីព្រះអង្គបានផ្លាស់ប្តូររាជធានីពីយសោធរេបុរៈរបស់ព្រះបាទយសោវរ្ម័នទី១។
+                                    ភាគច្រើនប្រាសាទនៅក្នុងតំបន់កោះកែរសាងសង់អំពីថ្មភក់។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/PRV/Neak_bus.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រាសាទអ្នកបួស ដែលស្ថិតនៅលើកូនភ្នំមួយ ដើមឡើយមានឈ្មោះថា ច័ន្ទនគីរី
+                                    ដែលមានទីតាំងស្ថិតនៅក្នុងស្រុកជាំក្សាន្ត ខេត្តព្រះវិហារ
+                                    តាមពិតគឺជាក្រុមប្រាសាទដែលសាងសង់
+                                    និងគ្រប់គ្រងកាន់កាប់តាំងពីសតវត្សរ៍ទី៧ដល់សតវត្សរ៍ទី៧នៃគ្រិស្តរាជ។
+                                    ប្រាសាទនេះត្រូវបានសិក្សាដោយលោក ប៉ាម៉ង់ ទីយ៉េ និងលោកឡាហ្សង់ គីយ្យា លោកអៃម៉ូនីញ៉េ
+                                    និងលោកបាកអស់រយៈពេលមួយសតវត្សរ៍មកហើយ
+                                    ចុងក្រោយបំផុតសិលាចារឹកសំខាន់ៗទាំងនោះដែលមានរហូតដល់ទៅប្រាំបួនផ្ទាំង
+                                    ត្រូវបានបកប្រែជាបន្តបន្ទាប់ ជាពិសេសសិលាចារឹក K-៣៤១ និងបកប្រែដោយលោក ហ្សក សឺដេស
+                                    នៅក្នុងឆ្នាំ១៩៥៤។ ចេញពីផ្លូវគ្រួសច្រកអានសេះមានផ្លូវបំបែកមួយទៅកាន់ផ្លូវប្រាសាទអ្នកបួស
+                                    ឬប្រាសាទច័ន្ទនគីរីជាផ្លូវមួយមានចម្ងាយប្រហែល ៣គីឡូម៉ែត្រ។
+                                    ក៏ប៉ុន្តែនៅជ្រលងភ្នំស្រះស្រង់ ឬបារាណ៍ទឹកបុរាណមួយនៅជើងភ្នំខាងក្រោមប្រាសាទ
+                                    ដែលមានទំហំដ៏ធំល្វឹងល្វើយ ដែលមានទឹកថ្លាសម្រាប់ធ្វើពីធីសាសនាព្រហ្មញ្ញ
+                                    និងសម្រាប់ការបង្ហូរទឹកស្រោចស្របស្រូវប្រាំនៃស្រែចម្ការរបស់សហគមន៍ខ្មែរតាំងបុរាណរហូតដល់សព្វថ្ងៃ។
+                                    ប្រាសាទច័ន្ទនគីរី ឬប្រាសាទអ្នកបួសមានជណ្តើរបែរមុខទីទិសខាត្បូងមានកាំជណ្តើរ១១កាំ
+                                    មានទំហំ១១ម៉ែត្រ ផ្នែកជាន់ទី១
+                                    និងជាន់ទី២មានទំហំតូចជាងបន្តិចដោយពុំអាចវាស់វេងបានពីព្រោះដោយសារព្រៃក្រាស់
+                                    និងបាក់បែកពិបាកវាស់វែង។ នៅកាំជណ្តើរនៃគោបុរៈមានការបាក់បែកស្ទើរទាំងអស់។
+                                    ប្រាសាទនេះមានកំពែងថ្មបាយក្រៀម និងថ្មភក់ព័ន្ធជុំវិញចំនួនបីជាន់។
+                                    នៅក្នុងបរិវេណនោះមានប្រាង្គធំៗបែរមុខទិសខាងត្បូង
+                                    ក្បាច់ផ្តែរបានបាក់បែកពាក់កណ្តាលធ្លាក់ចុះមកក្រោម
+                                    ដោយមានការបំផ្លាញពីជនពាលតាមរយៈការដាក់រំសេវបំបែកយកវត្ថុបុរាណទៅលក់។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តព្រះវិហារ ត្រូវបានបង្កើតឡើងដោយក្រមលេខ១៩៤ ប រ នាថ្ងៃទី២២ ខែកក្កដា ឆ្នាំ១៩៦៤
+                                គឺក្រោយពេលព្រះរាជាណាចក្រកម្ពុជាឈ្នះក្តីលើប្រទេសថៃតាមសាលក្រមចុះថ្ងៃទី១៥ ខែមិថុនា
+                                ឆ្នាំ១៩៦២ នៅតុលាការអន្តរជាតិនាទីក្រុងឡាអេ ប្រទេសហូឡង់ ដោយបានដាក់ឈ្មោះថា «ខេត្តព្រះវិហារ»
+                                ។
+                                បើយោងតាមឯកសាររដ្ឋបាលខេត្តបានឱ្យដឹងថាខេត្តព្រះវិហារកាលនោះមានចំនួន៤ស្រុកដែលរួមមាន៖ស្រុករវៀង
+                                ស្រុកឆែប ស្រុកជាំក្សាន្ត និងស្រុកអង្គរធំ​។
+
+                                ស្រុករវៀង ស្រុកឆែប និងស្រុកជាំក្សាន្ត ត្រូវបានកាត់ចេញពីខេត្តកំពង់ធំ ចំណែកឯ
+                                ស្រុកអង្គរធំត្រូវបានកាត់ពីខេត្តសៀមរាប ៣ឃុំ គឺ ឃុំអន្លង់វែង ឃុំថ្កូវ និងឃុំកោះកែរ។
+
+                                ខេត្តព្រះវិហារមានទីរួមខេត្តនៅ ឃុំកំពង់ប្រណាក ដោយមានឈ្មោះថា «ស្រុកត្បែងមានជ័យ»។
+                                ស្រុកត្បែងមានជ័យគឺជាទីរួមខេត្តរបស់ខេត្តព្រះវិហារ ដែលត្រូវបានបង្កើតឡើងនៅក្នុងឆ្នាំ១៩៨២
+                                រហូតដល់ថ្ងៃទី២៥ ខែកុម្ភៈ ឆ្នាំ២០០៩។ ស្រុកត្បែងមានជ័យត្រូវបានប្តូរទៅជាក្រុងព្រះវិហារវិញ
+                                នៅថ្ងៃទី១៧ខែឧសភា ឆ្នាំ២០០៩។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                សេដ្ឋកិច្ចខេត្តព្រះវិហារដោយប្រជាជនប្រកបមុខរបរធ្វើស្រែចម្ការ បរបាញ់សត្វ នេសាទ រកជ័រជាដើម។
+                                ប្រជាពលរដ្ឋនៅខេត្តព្រះវិហារភាគច្រើនជាជនជាតិខ្មែរនិងមានជនជាតិភាគតិច កួយ មានប្រមាណ២០%
+                                មានរបរធ្វើស្រែចម្ការ រកជ័រ រកវល្លិ៍ លក់ដូរ និងនេសាទត្រីបន្តិចបន្តួច។
+                                ការងារធ្វើស្រែចំការពុំសូវទទួលបានទិន្នផលខ្ពស់ឡើយ ព្រោះដោយបងប្អូនធ្វើតាមរបៀបអភិរក្សនិយម
+                                គឺធ្វើស្រែប្រវាស់មេឃ។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Preah Vihear</h1>
 </body>
+
 </html>

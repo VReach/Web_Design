@@ -1,17 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Mondulkiri</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Mondulkiri_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តមណ្ឌលគីរី ជាខេត្តស្ថិតនៅភាគខាងកើតប្រទេសកម្ពុជា។ ខេត្តនេះមានផ្ទៃដីធំជាងគេ
+                                តែមានប្រជាជនតិចជាងគេ។ ទីរួមខេត្តឈ្មោះក្រុងសែនមនោរម្យ។
+                                ខេត្តមណ្ឌលគីរីជាតំបន់ទេសចរណ៏ធម្មជាតិធំមួយនៃព្រះរាជាណាចក្រកម្ពុជា
+                                ដែលមានតំបន់ទេសចរណ៏ធម្មជាតិជាច្រើនដូចជាទឹកជ្រោះប្រកបដោយហ្វូងមច្ឆាជាច្រើនប្រភេទ
+                                ព្រមទាំងរុក្ខជាតិ សត្វព្រៃ ព្រៃកោងកាង និងភ្នំតូចធំជាច្រើន។
+
+                                ខេត្តមណ្ឌលគីរីជាខេត្តមួយដែលសិ្ថតនៅភូមិភាគឦសាននៃប្រទេសកម្ពុជា ហើយមានចំងាយ
+                                ៣៨២គីឡូម៉ែត្រពីរាជធានីភ្នំពេញ និមិត្តសញ្ញានៃខេត្តគឺតំណាងអោយសត្វគោព្រៃ
+                                ដែលជាថនិកសត្វជាតិរបស់កម្ពុជា។ចំពោះចំនួនប្រជាពលរដ្ឋសរុបនៅក្នុងខេត្តមណ្ឌលគិរីគឺ៩៣,៤៤១នាក់
+                                ដែលស្មើនឹង២២,២២០គ្រួសារដែលមានដង់ស៊ីតេ ៧នាក់ក្នុងមួយគីឡូម៉ែត្រ។
+                                ប្រជាពលរដ្ឋដែលជាជនជាតិដើមភាគតិចនៅទូទាំងខេត្តសរុបមានចំនួន ៥៣,៤៤៤នាក់ ស្មើនឹង៥៧,២០ភាគរយ
+                                នៃប្រជាជនសរុប ដែលមាន ៨ជនជាតិ ក្នុងនោះរួមមាន៖ជនជាតិព្នង ក្រោល គ្រឹង ស្ទៀង ទំពួន ចារាយ
+                                ថ្មួន និងកួយ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/MDK/១.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ទឹកជ្រោះប៊ូស្រាមានទីតាំងស្ថិតនៅចម្ងាយប្រមាណ
+                                    ៤៣គីឡូម៉ែត្រពីក្រុងសែនមនោរម្យនៃទីរួមខេត្តមណ្ឌលគិរី តាមបណ្តោយផ្លូវទៅស្រុកពេជ្រចិន្តា។
+                                    ទឹកជ្រោះប៊ូស្រាជាតំបន់កំសាន្តល្អជាងគេក្នុងខេត្តមណ្ឌលគិរី។
+                                    ខេត្តនេះមានតំបន់ទេសចរណ៍សំខាន់ដូចជា ភ្នំដោះក្រមុំ សមុទ្រឈើ ចម្ការកាហ្វេជាដើម
+                                    ទឹកជ្រោះនេះចែកចេញជាបីដំណាក់៖
+
+                                    ដំណាក់ទី១: ហូរធ្លាក់ក្នុងកំពស់ ៨ ទៅ ១២ម៉ែត្រ ដែលមានមុខកាត់ទទឹង ១៥ម៉ែត្រ នៅរដូវវស្សា
+                                    និង កំពស់ពី១០ ទៅ ១៥ម៉ែត្រ នៅរដូវប្រាំង។
+                                    ដំណាក់ទី២: ហូរធ្លាក់ពីកំពស់ ១៥ ទៅ ២០ម៉ែត្រ និង មុខកាត់ទទឹង ២០ម៉ែត្រនៅរដូវវស្សា និង
+                                    កំពស់ពី១៨ ទៅ ២៥ម៉ែត្រ ដែលមានមុខកាត់១៣ម៉ែត្រ នៅរដូវប្រាំង។ ទឹកធ្លាក់ទី២នេះ
+                                    មានចំងាយ១៥០ម៉ែត្រពីទឹកធ្លាក់ទី១។
+                                    ដំណាក់ទី៣: ហូរធ្លាក់ដោយល្បឿនលឿនខ្លាំងជាងល្បាក់ទី២។ ល្បាក់នេះ យើងមិនអាចទៅដល់បានទេ
+                                    ពីព្រោះជាតំបន់ព្រៃក្រាស់ ខ្វះមធ្យោបាយធ្វើដំណើរ និង តំបន់គ្រោះថ្នាក់នៃពពួកសត្វព្រៃ។
+                                    តំបន់រមណីដ្ឋាននេះ អាចទៅកំសាន្តនៅរដូវប្រាំង
+                                    ព្រោះវាបង្កលក្ខណៈងាយស្រួលក្នុងការធ្វើដំណើរ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/MDK/Sen_MonoRom.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ទឹកជ្រោះសែនមនោរម្យ​មានទីតាំងស្ថិតនៅក្នុងស្រុកសែនមនោរម្យ ខេត្តមណ្ឌលគិរី មានចំងាយ
+                                    ៥គីឡូម៉ែត្រពីទីរួមខេត្ត។ នៅសងខាងផ្លូវមានដំណាំឧស្សាហកម្មជាច្រើនដូចជា​ កៅស៊ូ កាហ្វេ
+                                    និង ស្វាយចន្ទី ជាដើម។
+                                    ទឹកជ្រោះសែនមនោរម្យ​ជាកន្លែងប្រមូលផ្តុំប្រជាពលរដ្ឋនៅថ្ងៃឈប់សំរាក ឬ ថ្ងៃបុណ្យជាតិ
+                                    ព្រោះមានទីតាំងនៅជិតទីរួមខេត្ត។ ទឹកជ្រោះនេះមានបីដំណាក់៖
+
+                                    ដំណាក់ទី១: កំពស់ទឹកធ្លាក់មានល្បឿនយឺត ដោយទឹកមានកំពស់ត្រឹមតែ មួយម៉ែត្រ និង មុខកាត់
+                                    ២ម៉ែត្រ។
+                                    ដំណាក់ទី២: ទឹកហូរធ្លាក់មានល្បឿនលឿនខ្លាំងនៅរដូវវស្សាដែលមានកំពស់ពី ៦ ទៅ ៧ម៉ែត្រ និង
+                                    នៅរដូវប្រាំងទឹកមានកំពស់ពី៧ ទៅ៩ម៉ែត្រ និង មុខកាត់ពី៤ទៅ៥ម៉ែត្រ។
+                                    នៅ​ជាប់​មាត់ជ្រោះ​មាន​កន្លែង​ធំ​ទូលាយ​សំរាប់​អង្គុយ​សំរាក​កំសាន្ត​ដែល​សំបូរ​ទៅ​ដោយ​គុម្ពឬស្សីព្រេច។
+                                    ដំណាក់ទី៣: ស្ថិតនៅចំងាយ ១គីឡូម៉ែត្រពីដំណាក់ទី២ ដែលទឹកធ្លាក់មានកំពស់
+                                    ១,៥ម៉ែត្រប៉ណ្ណោះ។ តំបន់នេះគ្មានអ្នកទៅកំសាន្តលេងទេ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/MDK/Romonea.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ទឹកជ្រោះរមនាមានចំងាយ១០គីឡូម៉ែត្រពីទីរួមខេត្តមណ្ឌលគិរី។
+                                    តំបន់នេះមានទីតាំងស្ថិតនៅក្នុងស្រុកសែនមនោរម្យ។ ទឹកជ្រោះរមនាមានទីតាំងល្អ
+                                    ដោយ​នៅ​ក្បែរ​ទឹកធ្លាក់​មាន​ប្រភេទដំណាំ​ឧស្សាហកម្មជាច្រើនដូចជា ដំណាំកៅស៊ូ កាហ្វេ
+                                    ស្វាយចន្ទី អាវ៉ូកាដូ (ប័រ) និង ប្រេសជាដើម។
+
+                                    ទឹកជ្រោះរមនាមានល្បាក់ទឹកធ្លាក់កំពស់​៥ម៉ែត្រ និង មុខកាត់ទទឹង ១០ម៉ែត្រនៅរដូវវស្សា។
+                                    រីឯនៅរដូវប្រាំងវិញ ទឹកមានកំពស់ ៦ម៉ែត្រ និង មុខកាត់ទទឹង ៨ម៉ែត្រតែប៉ណ្ណោះ។
+                                    ទឹកនេះ​ហូរ​ជា​ល្បាក់​ជំរាល ផ្នែកខាងក្រោមមានអាងស្តុកទឹកយ៉ាងធំ ដែលយើងអាចហែលងូតលេងបាន។
+                                    ក្រៅពីមានទឹកធ្លាក់នៅតំបន់នេះមានដើមឈើធំៗ ដែលជាម្លប់យ៉ាងត្រជាក់ដល់ការទៅកំសាន្តនៅទីនោះ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/MDK/មណ្ឌលគីរី-ទឹកធ្លាក់ជ្រៃធំ3.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ទឹក​ជ្រោះ​ជ្រៃ​ធំ ​មាន​ទីតាំង​ស្ថិត​នៅ​ក្នុង​ស្រុក​សែន​មនោរម្យ​ ខេត្តមណ្ឌលគិរី
+                                    មាន​ចំ​ងាយ​ ៣៤គីឡូម៉ែត្រ​ ពី​ទី​រួម​ខេត្ត​ ។​ ទឹក​ជ្រោះ​ជ្រៃ​ធំ​មាន​កំ​ពស់​
+                                    ១៥ម៉ែត្រ​ មុខ​កាត់​ទទឹង​ ២ម៉ែត្រ​ នៅ​រដូវ​វស្សា​ទឹក​ធ្លាក់​បែក​ផែ្សង​
+                                    និង​រដូវ​វស្សា​ទឹក​មាន​កំ​ពស់​ ១១ម៉ែត្រ​ និង​ទទឹង​មុខ​កាត់​ ៧ម៉ែត្រ​
+                                    ក្រៅ​ពី​ទឹក​ធ្លាក់​ តំ​បន់​ទនេ្ល​មាន​ចំ​ការ​ស្រ​ឡៅ​ព័ន្ធ​ជុំ​វិញ​
+                                    និង​ដើម​ជ្រៃ​មួយ​យ៉ាង​ធំ​ដែល​មាន​បែក​មែក​សា​ខា​ ។​
+                                    តំ​បន់​នេះ​មាន​មន្ទីរ​ទេសចរណ៏​ខេត្ត​
+                                    បាន​សហការ​ជា​មួយ​អា​ជ្ញា​ធរ​ដែន​ដី​រៀប​ជា​តំ​បន់​ទេសចរណ៏​ សំ​រាប់​ជំ​នួស​
+                                    ទឹក​ជ្រោះ​ប៊ូ​ស្រា​នៅ​រដូវ​វស្សា​ ដែល​មិន​អាច​ទៅ​បាន។​
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                មុនឆ្នាំ១៩៦០ ខេត្តមណ្ឌលគិរីជាផ្នែកមួយនៃខេត្តក្រចេះ។ ខេត្តមណ្ឌលគិរី
+                                ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ១៩៦១ ដោយ ព្រះករុណាព្រះបាទសម្ដេចព្រះនរោត្តម សីហនុ
+                                ព្រះមហាវីរក្សត្រព្រះវររាជបិតាឯករាជ្យបូរណភាពទឹកដី និងឯកភាពជាតិខ្មែរ ព្រះបរមរតនកោដ្ឋ
+                                ដោយមានស្រុកចំនួន ០៣ គឺ ស្រុកកោះញែក ស្រុកច្បារ និងស្រុកអូររាំង។
+                                ក្រុងសែនមនោរម្យត្រូវបានបង្កើតឡើងជាទីរួមខេត្តក្នុងឆ្នាំ១៩៦២។
+                                ក្នុងកំឡុងសង្គ្រាមវៀតណាមនៅចុងទសវត្សរ៍ឆ្នាំ១៩៦០
+                                ខេត្តមណ្ឌលគិរីគឺជាមូលដ្ឋាននៃមូលដ្ឋានចំនួនបីនៃរណសិរ្សរំដោះជាតិវៀតណាមខាងត្បូងដែលបណ្តាលឱ្យមានការលុកលុយ
+                                និងការទម្លាក់គ្រាប់បែកជាច្រើនដោយកងកម្លាំងសហរដ្ឋអាមេរិក។ នៅឆ្នាំ១៩៦៩-១៩៧០
+                                ខេត្តមណ្ឌលគិរីបានធ្លាក់នៅក្រោមការគ្រប់គ្រងរបស់ខ្មែរក្រហម ហើយជាលទ្ធផល
+                                ប្រជាជនភាគច្រើនត្រូវបានផ្លាស់ទីលំនៅទៅស្រុកកោះញែក
+                                ជាកន្លែងដែលប្រជាជនត្រូវបានបង្ខំឱ្យធ្វើការក្នុងស្រែ។ ភូមិ សាលារៀន
+                                និងមន្ទីរពេទ្យទាំងអស់ត្រូវបានបំផ្លាញ។ នៅឆ្នាំ១៩៧៥
+                                ខ្មែរក្រហមបានកាប់សម្លាប់ប្រជាពលរដ្ឋខ្មែរនៅខេត្តមណ្ឌលគិរីអស់ជាងពាក់កណ្តាល។
+                                រហូត​ដល់​ទសវត្សរ៍ឆ្នាំ១៩៨០
+                                ជនជាតិ​ព្នង​ត្រូវ​បាន​អនុញ្ញាត​ឱ្យ​ត្រឡប់​ទៅ​ភូមិ​និង​ស្រុក​កំណើត​ប្រពៃណី​របស់​ខ្លួន​វិញ។ជនជាតិព្នងបានរស់នៅក្នុងតំបន់មណ្ឌលគិរីប្រហែល២០០០ឆ្នាំមកហើយ។
+                                មានឯកសារតិចតួចអំពីជនជាតិព្នងរហូតដល់អាណានិគមបារាំងដាក់ប្រទេសកម្ពុជាក្នុងឆ្នាំ ១៨៦៤។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ការប្រកបរបរកស៊ីរបស់ពួកគេនៅទីប្រជុំជន គឺទីរួមខេត្តគេប្រកបមុខរបរពាណិជ្ជកម្ម បើនៅឯជនបទវិញគេ
+                                ដើរបោចវល្លិ ដើរប្រមាញ់សត្វតាមរបៀបបុរាណ ចំពោះការធ្វើស្រែវិញមានតែនៅស្រុកកោះញែកមួយប៉ុណ្ណោះ
+                                គេធ្វើ ស្រែបុកដាំនៅលើខ្នងភ្នំ ដូច្នេះអំណោយផលវាទទួលបានតិចណាស់ព្រោះវាអាស្រ័យទៅលើទឹក ភ្លៀង
+                                ប្រសិន បើភ្លៀងធ្លាក់ជោកជាំទើប ដំណាំស្រូវរបស់ពួកគាត់ បានផលល្អ
+                                ជីវភាពរបស់ពលរដ្ឋនៅខេត្តមណ្ឌលគីរី មានកំរិតទាបណាស់ក្នុង មួយថៃ្ងមនុស្សម្នាក់មិនអាចរកចំណូល
+                                បាន៥០០រៀលផង។ ក្រៅពីមុខរបរធ្វើស្រែ ប្រជាជនខ្លះទៀតមានមុខរបរ ជាអ្នកចំការ មន្រ្តីរាជការ
+                                រីឯខ្លះទៀត ប្រកបរបរនៅក្នុងវិស័យទេសចរណ៍ដោយធ្វើការផ្គត់ផ្គង់ដល់សេវាកម្ម ស្នាក់នៅ
+                                បំរើសេវាកម្មម្ហូបអាហារ ព្រមទាំងសេវាកម្មបន្ទាប់បន្សំជាច្រើនទៀតផងដែរ។
+
+
+                                ជនជាតិព្នងមួយក្រុមស្លៀកពាក់ក្នុងពិធីប្រពៃណីមកពីខេត្តមណ្ឌលគិរី ប្រទេសកម្ពុជា
+                                ប្រជាជន៨០%ជាជនជាតិភាគតិច១០ជនជាតិ។ ជនជាតិដែលមានច្រើនជាងគេគឺជនជាតិព្នង។
+                                នៅសល់២០%ទៀតជាជនជាតិខ្មែរ ចិន និង ចាម។ ប្រជាជននៅទីនោះប្រកបរបរជាចំបងគឺ ដាំដុះស្រូវ
+                                ដើមឈើហូបផ្លែ និងបន្លែបង្កាផ្សេងៗ។ ក្រៅពីនេះពួកគេដាំ ស្ត្របឺរី កាហ្វេ កៅស៊ូ
+                                និងគ្រប់ស្វាយចន្ទី។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Mondulkiri</h1>
 </body>
+
 </html>

@@ -1,17 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to RatanaKiri</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Ratanakiri_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តរតនគិរី គឺជាខេត្តមួយស្ថិតនៅភូមិភាគឦសាននៃប្រទេសកម្ពុជា។
+                                ខេត្តរតនគិរីមានព្រំប្រទល់ខាងខាងកើតជាប់នឹងខេត្តកន្ទូម និងខេត្តយ៉ាឡាយ
+                                នៃសាធារណរដ្ឋសង្គមនិយមវៀតណាម ខាងលិចជាប់នឹងខេត្តស្ទឹងត្រែង ខាងជើងជាប់នឹងខេត្តអាត្តពឺ
+                                នៃសាធារណរដ្ឋប្រជាធិបតេយ្យប្រជាមានិតឡាវ និងខាងត្បូងជាប់នឹងខេត្តមណ្ឌលគិរី ហើយមានចម្ងាយ
+                                ៥៨៨គីឡូម៉ែត្រ ពីរាជធានីភ្នំពេញ ។
+                                ខេត្តរតនគិរីជាខេត្តមួយដែលមានលក្ខណៈពិសេសជាងគេក្នុងចំណោមខេត្តដែលនៅភូមិភាគឦសានប្រទេសកម្ពុជា
+                                ដោយខេត្តមានតំបន់ទេសចរណ៍ធម្មជាតិជាច្រើនអនេក និងទេសចរណ៍វប្បធម៌ជនជាតិភាគតិចផងដែរ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/RTK/1280px-Yak_Loum.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    បឹងយក្សឡោមជារមណីយដ្ឋានដ៏មានប្រជាប្រិយភាពនៅក្នុងខេត្តរតនៈគីរី។
+                                    បឹងដែលជាស្លាកស្នាមនៃមាត់ភ្នំភ្លើងប្រមាណ ៤០០០ ឆ្នាំមុន
+                                    ស្ថិតនៅប៉ែកខាងត្បូងឆៀងខាងកើតពីរួមខេត្តប្រហែល ៤,៨ គ.ម ។ ដោយបឹងនេះមានជំរៅជ្រៅរហូតដល់
+                                    ៤៨ម៉ែត្រ ទឹកបឹងមានសភាពថ្លាឆ្វង់ហើយស្អាត។
+                                    មាត់បឹងមានរាងស្ទើរជារង្វង់ដែលមានអង្កត់ផ្ចិតប្រមាណ ៧៥០ម។ នៅជុំវិញបឹង សំបូរដោយដើមឈើធំៗ
+                                    ដែលជាជំរកនៃសត្វសេក និងសត្វកំរៗនានាជាច្រើន។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/RTK/Veal_thom.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ឧទ្យានជាតិវិរៈជ័យ​មាន​ទី​តាំងនៅភាគឦសានប្រទេសកម្ពុជាលាតសន្ធឹងគ្របដណ្តប់ខេត្តរតនគិរី
+                                    និង ស្ទឹងត្រែង ។ ឧទ្យាន​នេះ​មាន​ព្រំ​ប្រទល់​ជាប់​ប្រទេសលាវ និង
+                                    វៀតណាម​ហើយ​មាន​ផ្ទៃ​ក្រឡា ៣.៣២៥ គីឡូម៉ែត្រ​ក្រឡា និង
+                                    ស្ថិត​នៅ​ភាគ​និរតី​នៃ​ប្រជុំជួរ​ភ្នំអាណោម ដែល​ចេញ​ពី​ប្រទេសវៀតណាម និង
+                                    ស្ថិត​នៅ​ជាយ​វាល ព្រៃ​ជម្រុះ​ស្លឹ​កឥណ្ឌូចិន កណ្តាល ។ ឧទ្យាន​ជាតិវិរៈ​ជ័យ
+                                    ចាត់​ទុក​ជា​ដែន​ជម្រក​មួយ​សម្រាប់​ពពួក​ថនិក​សត្វ​ធំៗ​របស់​ប្រទេសកម្ពុជា
+                                    មាន​ដូចជា​ខ្ទីង ទន្សោង ក្របីព្រៃ ដំរី ខ្លាដំបង ខ្លារខិន ជា​ដើម ។
+                                    លក្ខណៈ​ជីវសាស្ត្រ​ឧទ្យាន​ជាតិ​វីរៈជ័យ មាន​សារ​សំខាន់​ដល់​ការងារ អភិរក្ស​អន្តរជាតិ ។
+                                    ឧទ្យានជាតិនេះជាដែនជម្រកព្រៃឈើសើមរយៈកម្ពស់មធ្យមប្រមាណជាង ៧៥ ភាគរយ នៃផ្ទៃប្រទេស ។
+                                    ភាគ​ច្រើន​នៃ​តំបន់​ភូមិភាគ​ឦសាន​ប្រទេស​កម្ពុជា​គ្របដណ្តប់​ដោយ​ព្រៃ​ជម្រុះ​ស្លឹក និង
+                                    ព្រៃ​ពាក់​កណ្តាល​ស្រោង ។ ព្រៃ​ឈើ​ឧទ្យាន​ជាតិវីរៈជ័យ
+                                    ភាគ​ច្រើន​ជា​ប្រភេទ​ព្រៃ​ពាក់​កណ្តាល​ស្រោង និង ព្រៃ​ស្រោង​បៃតង​ជានិច្ច ។
+                                    ទិដ្ឋភាព​ចម្រុះ​របស់​ឧទ្យាន​ជាតិ​នេះ ក៏​បង្កប់​ផង​ដែរ​នូវ​តំបន់​ទំនាប​លិច​ទឹក
+                                    វាល​ស្មៅ ព្រៃឫស្សី ព្រៃចម្រុះ ជ្រុះស្លឹក និង ព្រៃជ្រុះស្លឹកសុទ្ធ ។
+                                    ឧទ្យាន​ជាតិ​នេះ​អាចជា​ដែន​ជម្រក​ព្រៃ​ឈើ​នៅសល់​ចុង​ក្រោយ​គេ​បំផុត​ដែល មាន​រុក្ខជាតិ
+                                    ប្រចាំ​តំបន់​ចាំ​បាច់​ត្រូវ​ការពារ ។ មាន​ទន្លេធំៗ​ពីរ គឺ​ទន្លេសាន នៅ​ភាគ​ខាង​ត្បូង
+                                    និង ទន្លេកុង នៅ​ភាគ​ខាង​លិច ជាប់​នឹង​ឧទ្យានជាតិ ។ ទន្លេ​ធំៗ​ទាំងពីរ និង
+                                    ស្ទឹង​ធំៗ​មួយ​ចំនួន​ទៀត ដែល​មាន​នៅ​ក្នុង​ឧទ្យានជាតិ គឺ​ជា​ប្រភព​អាង ទឹក
+                                    ដ៏​សំខាន់​របស់​តំបន់​​នេះ ហើយ​វា​ក៏​បាន​ទ្រទ្រង់​ដល់​ធម្មជាតិ និង
+                                    សត្វ​ទឹក​នានា​មួយ​ចំនួន​ធំ​ដែល​ខ្លះ​ជា​ប្រភេទ​ប្រចាំ​តំបន់។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/RTK/d260ef4cffee4532bbb8b3baa0fb6399.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ស្ថិតនៅខាងលិចបានលុង ៨ គីឡូម៉ែត្រ ហើយធ្លាក់ជាប់ជាប្រចាំ ។ ប្រភពទឹកមានតំបន់ភ្នំស្វាយ
+                                    ហើយនៅក្រោមទឹកធ្លាក់នេះគឺជារន្ធដ៏ធំមួយដែលអាចឱ្យភ្ញៀវទេសចរចូលទៅឈរ ឬ
+                                    អង្គុយពីក្រោមទឹកធ្លាក់បាន ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តរតនគិរី មានរស់នៅប្រហែលយុទ្ធសម័យលោហៈមកម្ល៉េះ ហើយការជួញដូររវាងតំបន់ខ្ពង់រាប
+                                និងទីប្រជុំជនតាមឈូងសមុទ្រថៃមានកាលបរិច្ឆេទយ៉ាងហោចណាស់សតវត្សទី៤ នៃគ.ស។ ចាប់ពីសតវត្សទី១៣
+                                រហូតដល់សតវត្សទី១៩ ភូមិខ្ពង់រាបត្រូវបានវាយឆ្មក់ជាញឹកញាប់ដោយពួកកងទ័ពស៊ីឈ្នួញខ្មែរ លាវ
+                                និងសៀម។ តំបន់នេះត្រូវបានឈ្លានពានដោយពួកយួន និងថៃក្នុងកំឡុងសតវត្សទី១៨-១៩ ។
+                                តំបន់នេះត្រូវបានវាតទីយកដោយពួកលាវនៅសតវត្សទី១៨ ហើយត្រូវបានពួកសៀមគ្រប់គ្រងនៅសតវត្សទី១៩។
+                                តំបន់នេះត្រូវបានដាក់បញ្ចូលទៅក្នុងឥណ្ឌូចិនរបស់បារាំងនៅឆ្នាំ១៨៩៣
+                                ហើយការគ្រប់គ្រងអាណានិគមបានជំនួសការជួញដូរទាសករ។ ជនជាតិបារាំងបានសាងសង់ចំការកៅស៊ូដ៏ធំ
+                                ជាពិសេសនៅ ឡាបានសៀក (ក្រុងបានលុងបច្ចុប្បន្ន)។
+                                ពួកកម្មករជនជាតិដើមភាគតិចត្រូវបានប្រើប្រាស់សម្រាប់ការសាងសង់ និងការប្រមូលផលកៅស៊ូ។
+                                ក្នុងពេលដែលស្ថិតនៅក្រោមការគ្រប់គ្រងរបស់បារាំង
+                                ទឹកដីដែលរួមមានរតនគិរីបច្ចុប្បន្នត្រូវបានផ្ទេរពីសៀមទៅលាវ រួចមកអោយកម្ពុជាវិញ។
+                                ទោះបីជាក្រុមតំបន់ខ្ពង់រាបដំបូងបានប្រឆាំងនឹងអ្នកគ្រប់គ្រងអាណានិគមរបស់ពួកគេក៏ដោយ
+                                នៅចុងបញ្ចប់នៃសម័យអាណានិគមនៅឆ្នាំ១៩៥៣ ពួកគេត្រូវបានបង្ក្រាប។ ខេត្តរតនគិរី
+                                ត្រូវបានបង្កើតឡើងនៅថ្ងៃអង្គារ ៩កើត ខែមាឃ ឆ្នាំច សំរឹទ្ធិស័ក ព.ស ២៥០១ ត្រូវនឹងថ្ងៃទី១៧
+                                ខែកុម្ភៈ ឆ្នាំ១៩៥៩ ព្រះហស្ថលេខាដោយសម្តេច ព្រះនរោត្តម សុរាម្រិត
+                                តាមរយៈសំណើររបស់ទេសរដ្ឋមន្ត្រីទទួលបន្ទុកក្រសួងមហាផ្ទៃ ផូ ព្រឿង និងនាយករដ្ឋមន្ត្រីស្តីទី
+                                សុន សាន ដែលត្រូវបានកាត់ចេញពីខេត្តស្ទឹងត្រែង និងមានតំបន់រដ្ឋបាលនៅស្រុកអណ្តូងពេជ្រ
+                                (ស្រុកបរកែវនាពេលបច្ចុប្បន្ន) និងស្រុកលំផាត់ ដែលមានផ្ទៃដីសរុបចំនួន១០,៤៥០ គីឡូម៉ែត្រការ៉េ
+                                និងមានស្រុកចំនួន ០៣ គឺស្រុកវ៉ើនសៃ ស្រុកអណ្តូងពេជ្រ និងស្រុកលំផាត់។
+                                ស្ថិតនៅក្នុងរបបសង្គមរាស្ត្រនិយមអតីតអភិបាលខេត្ត ដែលនៅក្នុងសម័យនោះហៅថា ប្រធានខេត្ត
+                                មានឈ្មោះលោកតា អ៊ុង ញ៉ច ត្រូវបានរាជរដ្ឋាភិបាល តែងតាំងឱ្យដឹកនាំខេត្តរតនគិរី
+                                ចាប់ពីឆ្នាំ១៩៥៩ ដល់ឆ្នាំ១៩៦៨ លោកតា ឈូ ស៊ាន ឆ្នាំ១៩៦៨ ដល់ឆ្នាំ១៩៧០ និងលោកតា សង្ស យៀវ
+                                ឆ្នាំ១៩៧០ បញ្ចប់ត្រឹមរដ្ឋប្រហារ លន់ ណល់។ស្ថិតនៅក្នុងសម័យសង្គមរាស្ត្រនិយម
+                                ក្រោមការដឹកនាំរបស់សម្តេចព្រះរមរតនកោដ្ឋ ខេត្តរតនគិរី ក៏ដូចជាខេត្តផ្សេងៗទៀត
+                                ប្រជាពលរដ្ឋបានរស់នៅប្រកបដោយសុខដុមរមនា។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ភាគច្រើនលើសលប់នៃជនជាតិភាគតិចប្រកបរបរកសិកម្មចំការព្រៃដុត។ ពួកគេដាំដុះស្រូវ ពោត ល្ពៅ
+                                សណ្តែកដី និងស្វាយចន្ទីជាដើម។ ជនជាតិខ្មែរនិងវៀតណាម១ចំនួនដែលមានលុយ
+                                កាន់កាប់ចំការធំៗនៅជុំវិញទីរួមខេត្តបានលុង។ ពួកគេដាំដុះ សណ្តែកដី កាហ្វេ គ្រប់ស្វាយចន្ទី
+                                និង កៅស៊ូ។រ៉ែត្បួងនៅភាគខាងត្បូងនិងខាងលិចខេត្ត គឺជាប្រភពចំនូលដ៏សំខាន់ និងជា
+                                គោលដៅរបស់ទេសចរណ៍និងអ្នករកត្បូង១ចំនួន។
+                                ខេត្តរតនគិរីល្បីថាជាកន្លែងសំបូរត្បូងកន្តឹមនិងកណ្ដៀងប្រណិតៗ។
+                                ពាណិជ្ជកម្មភាគច្រើនធ្វើឡើងជាមួយវៀតណាម តាមរយៈផ្លួវជាតិលេខ ១៩ ដែលឆ្លងកាត់ទីរួមខេត្តបានលុង។
+                                ទោះជាយ៉ាងណាក៏ដោយ វិស័យទេសចរណ៍បានក្លាយជាប្រភពចំនូលនាំមុខគេ
+                                ចូលរួមចំនែកក្នុងកំនើនសេដ្ឋកិច្ច។ បានលុងមានសណ្ឋាគារច្រើនជាង៤ និង ផ្ទះសំណាក់រាប់មិនអស់។
+                                ភោជនីយដ្ឋាននិងហាងទំនិញត្រួវបានរីកដុះដាលដួចផ្សិតដើម្បីឆ្លើយតបនិងកំនើនអ្នកទេសចរណ៍នាពេលថ្មីៗនេះ។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to RatanaKiri</h1>
 </body>
+
 </html>

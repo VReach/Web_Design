@@ -11,7 +11,9 @@
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+   html{
+    scroll-behavior: smooth;
+  }
   body {
     background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
     background-repeat: no-repeat;
@@ -99,6 +101,22 @@
       }
     }
   }
+  #toparrow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #feb47b;
+    color: white;
+    border: 3px solid white;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+    }
 </style>
 
 <body>
@@ -223,6 +241,9 @@
         shape="poly">
     </map>
   </div>
+  <a href="#top" title="up to top" id="toparrow">
+      <i class="fa-solid fa-arrow-up"></i>
+  </a>
 </body>
 
 </html>

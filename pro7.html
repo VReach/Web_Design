@@ -1,17 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Kratie</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Kratié_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ក្រចេះ គឺជាខេត្តមួយក្នុងប្រទេសកម្ពុជា។ ក្រុងរបស់ខេត្តមានឈ្មោះថាក្រចេះដែលជាទីរួមខេត្ត។
+                                ក្រចេះគឺជាខេត្តតូចមួយតែគួរឲ្យចាប់ចិត្តសិ្ថតនៅប៉ែកឦសាននៃរាជធានីភំ្នពេញ។
+                                វាមានព្រំប្រទល់ជាប់នឹងស្ទឹងត្រែងនៅភាគខាងជើង មណ្ឌលគីរីនៅខាងកើត កំពង់ធំ និង
+                                កំពង់ចាមនៅខាងលិច ហើយត្បូងឃ្មុំ និងវៀតណាមនៅខាងត្បូង។ មានផ្លូវគមនាគមន៍តភ្ជាប់ ៣ខែ្ស
+                                គឺផ្លូវជាតិលេខ៧ ចម្ងាយ ៣៤0 គីឡូម៉ែត្រ ផ្លូវលំក្រាលក្រួសក្រហម កាត់ស្រុកតំបែរ-ស្រុកឆ្លូង
+                                មួយខែ្សនិងតាមមាត់ទនេ្លមួយខែ្សទៀត មានចម្ងាយប្រហាក់ប្រហែល នឹងផ្លូវទឹកទនេ្លមេគង្គ ២២០
+                                គីឡូម៉ែត្រ។ ការធ្វើដំណើរ ទោះបីតាមរថយន្តកី្តតាមកាណូតលឿនកី្តមិនលើសពី៥ម៉ោងទេ
+                                ពិតជាបានមកដល់ក្រុងក្រចេះដោយសុវតិ្ថភាព។ ខេត្តក្រចេះ សម្បូរដោយធនធានធម្មជាតិ នៅលើដី
+                                មានព្រៃព្រឹក្សា វាលស្រែ ដីមានជីជាតិ នៅក្នុងទឹកសម្បូរដោយត្រី ពិសេសមេពូជត្រីធំៗ
+                                នៅតាមអន្លង់មេគង្គក្នុងស្រុកសំបូរ និងមានសត្វផ្សោតទឹកសាប ដែលទាក់ទាញភ្ញៀវ ទេសចរជាតិ
+                                និងអន្តរជាតិ។ ក្រៅពីនេះ នៅមានទេសភាពដ៏ស្រស់សោភ័ណ ថៃ្ងលិចគងព្រៃកោះទ្រង់ដ៏ស្អាត
+                                គួរឱ្យចង់ទស្សនាទៀតផង។ ទាំងអស់ដែលបានបរិយាយចោះៗ ខាងលើ
+                                ធ្វើឲ្យខេត្តក្រចេះមានកំណើនភ្ញៀវទេសចរណ៍ទេ្វដងក្នុង មួយឆ្នាំៗ។ កត្តាទាំងនេះបាន
+                                ចង្អុលឲ្យខេត្តក្រចេះជ្រើសរើសយក វិស័យទេសចរណ៍ជាវិស័យអាទិភាពក្នុងកិច្ចការស្តារ
+                                និងអភិវឌ្ឍសេដ្ឋកិច្ច ទោះតាមរយៈចំណូលដោយផ្ទាល់កី្ត ដោយប្រយោលកី្ត
+                                ក៏វិស័យទេសចរណ៍បានកំពុងជំរុញយ៉ាងស្វាហាប់
+                                ដើម្បីធ្វើជាឧបករណ៍វិជ្ជមានមួយក្នុងការកាត់បន្ថយភាពក្រីក្រ
+                                បង្កើនការងារសម្រាប់ប្រជាពលរដ្ឋជាង ២៨ម៉ឺននាក់ នៅខេត្តក្រចេះ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="text">
+                                <p>
+                                    ក្រចេះជាខេត្តមួយដែលមានកន្លែងទេសចរណ៍កួរឲ្យទាក់ទាញភ្ញៀវទេសចរណ៍មានដូចជា
+                                    រមណីយដ្ឋានព្រែកកាំពី ដែលមានសត្វផ្សោតទឹកសាបដ៍កម្រនៅលើពីភពលោក
+                                    ​ទោះបីជាកំណាត់​ផ្លូវ​ក្រាល​​កៅស៊ូ​មួយ​ខ្សែ​ ឆ្ពោះ​​ទៅ​រមណីយដ្ឋា​ន​អន្លង់​ផ្សោត
+                                    ​​រមណីយដ្ឋាន​​កាំពី​ និងវត្ត​​សសរ​​មួយរយ មាន​លក្ខណៈ​​តូច​ចង្អៀត​​ក្តី​
+                                    ក៏ប្រជាពលរដ្ឋ​ ភ្ញៀវ​​ទេ​ស​ចរ​​ជាតិ​ និងអន្តរជាតិ​
+                                    នៅតែព្យាយាម​​ធ្វើ​​ដំណើរ​ទៅទស្សនា​កំសាន្ត​ តាម​​​មធ្យោ​បាយ ​​រៀងៗ​ខ្លួន​ដែរ​
+                                    ព្រោះ​ថា​ជាផ្លូវសំខាន់​​ហើយ​តែង​មាន​សភាព​កុះករ​ក្នុង​ពេល​​មានបុណ្យទាន​ម្តងៗ។
+                                    នាឱកាស​បុណ្យ​ចូលឆ្នាំ​​ គេ​ឃើញ​​ភ្ញៀវ​ទេសចរ​ជាតិ​និងអន្តរជាតិ​​ធ្វើដំណើរ
+                                    លើ​កំណាត់​ផ្លូវ​ក្រាល​កៅស៊ូ​​នេះ​ឆ្ពោះ​ទៅ​កាន់​​រមណីយ​ដ្ឋាន​អន្លង់​ផ្សោត
+                                    ​រមណីយ​ដ្ឋាន​​កាំពី​ និង​វត្ត​សសរ​១០០​​ វត្តភ្នំសំបុក ភ្នំសុពណ៌កាឡី សួនស្នេហ៍ថ្មបាំង
+                                    ព្រមទាំងទិញ ក្រូចកោះទ្រង់ ក្រឡានថ្មគ្រែ និង វត្ថុអនុស្សារីយន៍ ជាច្រើនទៀត
+                                    ថ្វីដ្បិត​សភាព​​ផ្លូវ​​មាន​លក្ខណៈ​​តូច​ចង្អៀតនិង​​​ជិះ​ប្រជ្រៀត​គ្នា​យ៉ាងណា​ក៏ដោយ
+                                    ក៏នៅតែមានមនុស្សជាច្រើនធ្វើដំណើរទៅលេងកំសាន្តយ៉ាងច្រើនគ្មាពេលលេង ។
+                                    ទេសចរណ៍ទទួលបានការយកចិត្តទុកដាក់ពីគ្រប់ស្ថាប័នពាក់ព័ន្ធទាំងអស់
+                                    ដើម្បីធ្វើការផ្សព្វផ្សាយ និងបង្កើតផលិតផលទេសចណ៍ដ៏សំបូរបែប
+                                    ជាពិសេសការចូលរួមពីសំណាក់វិស័យឯកជន
+                                    ដែលដើរតួយ៉ាងសំខាន់ក្នុងការជម្រុញវិស័យមួយនេះឱ្យមានការរីកចម្រើនគួរឱ្យកត់សម្គាល់
+                                    ជាក់ស្តែង ខេត្តមានសណ្ឋាគារ ចំនួន១៤កន្លែង (ស្មើនឹង ៦០១បន្ទប់) ផ្ទះសំណាក់
+                                    ចំនួន៤៨កន្លែង (ស្មើនឹង ៤៥០បន្ទប់) ភោជនីយដ្ឋានចំនួន ៥៨កន្លែង និងរមណីយដ្ឋានសរុបចំនួន
+                                    ១៨កន្លែង សម្រាប់ទាក់ទាញភ្ញៀវទេសចរ ជាពិសេសសត្វផ្សោតទន្លេមេគង្គ ។ ជាក់ស្តែង
+                                    ក្នុងឆ្នាំ២០១៩ ខេត្តក្រចេះ បានស្វាគមន៍ភ្ញៀវទេសចរទាំងជាតិ-អន្តរជាតិ សរុបចំនួន
+                                    ៣៧៣.៦៩៦នាក់ ក្នុងនោះភ្ញៀវជាតិ ចំនួន ៣៤៦.៨១៨នាក់ និងភ្ញៀវអន្តរជាតិ ចំនួន ២៦.៨៧៨នាក់ ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                តាមចាស់ព្រឹទ្ធាចារ្យក្នុងតំបន់នេះបានអោយដឹងថា ក្រចេះ គឺជាពាក្សក្លាយពីភាសាបារាំងថា GATILLE
+                                ដោយអ្នកបកប្រែ អោយអាជ្ញាធរបារាំងពេលនោះ និយាយពុំត្រឹមត្រូវតាមភាសាបារាំង។ ពាក្យ GATILLE
+                                ក្លាយមកជា ក្រចេះ។ ដោយមានការបះបោរពីជនជាតិដើមភាគតិច "ព្នង"
+                                ប្រឆាំងនឹងការត្រួតត្រារបស់បារាំង អាណា ព្យាបាលបារាំងពេលនោះបានបញ្ជូនទ័ព និងចាត់លោក GATILLE
+                                ឲ្យផ្គត់ផ្គង់សម្ភារៈសឹក ភស្តុភារ និងបោះទីតាំងក្នុងទីក្រុង ក្រចេះសព្វថៃ្ងដោយ
+                                តាំងនាមមូលដ្ឋាននោះថា CAMP LOGISTIQUE DE GATILLE មានន័យថា ជំរុំភស្តុភារ Gatille។
+                                ដូចនេះអ្នកខ្លះយល់ថា ក្រចេះ គឺជាពាក្យក្លាយមក ពីឈ្មោះនាយទាហានបារាំងរូបនេះ។
+
+                                តាមវចនានុក្រមខែ្មរ របស់សមេ្តចសង្ឃរាជ ជួន-ណាត ភាគទី១ និង ភាគទី២ ត្រង់ទំព័រ៩៣០
+                                បោះពុម្ពឆ្នា១៩៦៧ សរសេរថា "ក្រចេ" (ន) (ពាក្យជនជាតិស្ទៀង) ក្របី កំពង់ក្រចេ កំពង់ចម្លងក្របី
+                                (ក្លាយមកជា ក្រចេះ)។ តាមការរៀបរាប់របស់ចាស់ទុំរស់នៅក្នុងតំបន់នេះ
+                                បានឲ្យដឹងថានៅសម័យដើមខេត្តក្រចេះ មានជនជាតិដើមភាគតិច ជាច្រើនរស់នៅ
+                                ហើយមានទំនាក់ទំនងពាណិជ្ជកម្មផេ្សងៗ នៅភូមិភាគឦសាន្តទាំងមូលតាមច្រក "កំពង់ចម្លងក្របី" របស់
+                                ជនជាតិស្ទៀងឆ្លងពីក្រចេះទៅតំបន់ ខាងលើ និងក្រចេះមកតំបន់ខាងក្រោម
+                                ហើយតែងតែមកផ្លាស់ប្តូរទំនិញទៅវិញទៅមកនៅ កំពង់ចម្លងនេះ។ ផែ្អកតាមឯកសារយោង របស់លោក ជួប-ឃាន
+                                កំណើត និងប្រវតិ្តនាមខេត្តក្រចេះ ចុះថៃ្ងទី ១៨ មេសា ២០០១ បព្ជាក់ថាសម័យកាល ក្រុងសម្ភុបុរៈ
+                                (សំបូរ) សេ្តចលាវតែងតែនាំសួយសារ ផេ្សងៗ មកថ្វាយសេ្តចខែ្មរ តាមរយៈកំពង់ចម្លងនេះដែរ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តក្រចេះ ស្ថិតនៅតំបន់ខ្ពង់រាបភាគឦសាន ខាងកើតឈៀងខាងជើងនៃប្រទេសកម្ពុជា
+                                ដែលមានចំងាយពីរាជធានីភ្នំពេញ ប្រមាណ ៣៤០ គ.ម តាមផ្លូវគោក និងចំងាយ ២២០ គ.ម.តាមផ្លូវទឹក។
+                                ខេត្តក្រចេះ មានផៃ្ទដីធម្មជាតិសរុបចំនួន ១១០៩៤ គ.ម២ ក្នុងនោះមានផៃ្ទដីសំរាប់កសិកម្ម ៨៥
+                                ទនេ្ល បឹងបួរ ព្រែក សំរាប់នេសាទ ៨៥ ដីក្រហម ០,៥៥ និង ព្រៃឈើ ៨៣,៥៥។
+                                ដើម្បីឆ្លើយតបទៅនឹងការវិវឌ្ឍន៍រីកចំរើនលើ វិស័យសេដ្ឋកិច្ចដ៏ឆាប់រហ័សរបស់កម្ពុជា ដោយ
+                                ឡែកខេត្តក្រចេះ សំដៅ ស្រូបយកសក្តានុពលនេះបានទាន់ពេលវេលា ក្នុងការធ្វើអោយមាន កំណើនការងារ
+                                កំណើនចំណូលគ្រួសារ និងខេត្តទាំងមូល ខេត្តក្រចេះបានរៀបចំតំបន់ឧស្សាហកម្ម ដែលមានផៃ្ទដីប្រមាណ
+                                ១៦០០ ហិកតាមានទីតាំងស្ថិតនៅ ឃុំ២ធ្នូ ស្រុកស្នួល ជាប់ព្រំដែនខេត្តប៊ិញភឿក
+                                សាធារណរដ្ឋសង្គមនិយមវៀតណាម។ តំបន់នេះចែកចេញជាពីរនៅអមផ្លូវលេខ ៧៤ ឆ្ពោះទៅ
+                                កាន់ច្រកទ្វារព្រំដែនអន្តរជាតិត្រពាំងស្រែ។
+                                សព្វថៃ្ងកំពុងបោះបង្គោលកំណត់ព្រំប្រទថដងថដថងដងដងដងល់ដីតាមការណែនាំរបស់ក្រសួងរៀបចំដែនដី
+                                នគរូបនីយកម្ម និង សំណង់។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Kratie</h1>
 </body>
+
 </html>

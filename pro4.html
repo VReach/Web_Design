@@ -1,17 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Stung Treng</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Stung_Treng_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តស្ទឹងត្រែង គឺជាខេត្តមួយនៅចុងខាងជើងនៃប្រទេសកម្ពុជា។ ឈ្មោះដើមហៅថា សុវណ៌្ណបុរ
+                                នៃដែនដីសុវណ៌្ណភូមិ កម្វុជទេឝ (ប្រាសាទបុរាណខ្មែរសាងច្រើនពីឥដ្ឋលាយថ្មភក់ ក្នុងសម័យហ្វូណន
+                                និងដើមសម័យចេនឡា) និងអាចតាមអ្នកស្រុកថា ឆ្ទិងតេង​ តាមភាសាសំស្ក្រឹត (ភាសាលាវថា សៀងតេង)
+                                ដែលមានព្រះសិវលិង្គរកឃើញចំនួន២គឺ វ្រះ ឝិវលិង្គ សុវណ៌្ណេឝ្វរ និងវ្រះឝិវលិង្គ សុវណ៌្ណលិង្គ
+                                និងមានទន្លេមេគង្គត្រូវហៅឈ្មោះដើមថា ទន្លេកម្វុជ / កម្ពុជា ហៅតាមសំស្ក្រឹតថា មហាតីថ៌
+                                ហើយក្រុងស្ទឹងត្រែងត្រូវប្រសព្វទន្លេជាច្រើនខ្សែហៅថា តីថ៌ (តីថ៌ ត្រូវចាត់ជាទន្លេលាងបាប
+                                និងមានមន្តសិរីជ័យមង្គលដល់អ្នកស្រុក)។ ទីក្រុងរបស់ខេត្តស្ទឹងត្រែងមានឈ្មោះថា
+                                ទីក្រុងស្ទឹងត្រែង។ ខេត្តមួយនៃប្រទេសកម្ពុជានៅភាគឦសាន។
+                                ដែលមានព្រំប្រទល់ជាប់ខេត្តរតនគិរីនៅខាងកើត ខេត្តមណ្ឌលគិរីនិងខេត្តក្រចេះនៅខាងត្បូង
+                                និងខេត្តកំពង់ធំនិងខេត្តព្រះវិហារ នៅខាងលិច
+                                ខេត្តនេះមានព្រំប្រទល់ខាងជើងជាប់នឹងព្រំដែនអន្តរជាតិឡាវ។
+                                ក្នុងខេត្តនេះមានទន្លេមេគង្គ​ហូរកាត់​ខេត្ត។ ខេត្តនេះភាគច្រើនគ្របដណ្តប់ដោយព្រៃឈើ
+                                និងធនធានជលផលមានសភាពសម្បូរបែប។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/STR/image-1-141-edited.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    រមណីយដ្ឋានអូរពងមាន់
+                                    មានទីតាំងសិ្ថតនៅភូមិពងមាន់ឃុំអូរពងមាន់ស្រុកសឹ្ទងត្រែងមានចម្ងាយ៩គ.មពី ទីរួមខេត្ត។
+                                    តំបន់នេះជាប្រភេទរមណីយដ្ឋានធម្មជាតិនិង កែចៃ្ន។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/STR/ស្ទឹងត្រែង_តំបន់ថាឡាបរិវាត់-2-1024x576.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    មានទីតាំងសិ្ថតនៅក្នុងស្រុកថាឡាបរិវ៉ាត់ ដែលមានចម្ងាយ៤គ.មពីទីរួមខេត្ត។
+                                    តំបន់នេះត្រូវធ្វើដំណើរឆ្លងកាត់ ទនេ្លសេកុងនិង ទនេ្លមេគង្គទៅកាន់ផ្លូវខេត្តព្រះវិហារ។
+                                    ថាឡាបរិវាត់ ជាប្រភេទរមណីយដ្ឋានប្រវត្តិសា្រស្ត ដែលនៅក្នុងតំបន់នោះមានប្រាសាទព្រះគោ
+                                    កសាងឡើងនៅសតវត្សទី៧-៨ធ្វើ អំពីឥដ្ឋក្រហម ក្នុងរជ្ជកាលស្តចជ័យវរ័្មនទី១។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/STR/Stung-Treng-រមណីយដ្ឋានកោះខ្សាច់-2.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    មានទីតាំងនៅលើដងទនេ្លសេកុងដែលមានចម្ងាយ៥គ.មពី ទីរួមខេត្ត។
+                                    តំបន់នេះជាប្រភេទរមណីយដ្ឋានធម្មជាតិតាមរដូវគឺ អាចទៅលេង កំសាន្តបាននូវរដូវប្រាំងជាពិសេស
+                                    ពេលបុណ្យចូលឆ្នាំប្រពៃណីខែ្មរយើង ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/STR/image_2023-09-29_13-56-02-edited.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p align="right">
+                                    មានទីតាំងសិ្ថតនៅតាមភូមិហាំងខូបាឃុំហាំងខូស្រុកសឹ្ទងត្រែង មានចម្ងាយ៦គ.មពី ទីរួមខេត្ត។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តស្ទឹងត្រែងមានរឿងភ្ជាប់ទៅនឹងពង្សាវតាតាំងពីយូរលង់ណាស់មកហើយរវាង៦០០គ.ស
+                                ក្នុងរាជ្យព្រះបាទឥសានវ័រ្មន និងព្រះបាទជ័យវ័រ្មន ដោយពេលនោះក្រុងកម្ពុជា
+                                ត្រូវបានចែកចេញជា២នគរ ។ នគរមួយមានទីក្រុងឈ្មោះ ភវបុរ (ភវបុរៈ) មួយទៀតឈ្មោះទីក្រុង សម្ភុបុរ
+                                (សម្ភុបុរ = ស្រុកសំបូរសព្វថ្ងៃ)ហើយខេត្តស្ទឹងត្រែង គឺស្ថិតនៅក្នុងក្រុងទី២នេះ ហើយរហូតដល់
+                                ៩០០គ.ស នគរទាំងពីរបានបង្រួបបង្រួមគ្នាទៅជាក្រុងកម្ពុជាតែមួយ
+                                និងបានលើកទីក្រុងទៅតាំងនៅអង្គរវិញ ។ នៅគ្រិស្តសករាជ១៤០០ កាលបែកបន្ទាយសង្វែក ដោយសារកងទ័ពសៀម
+                                ពេលនោះព្រះបាទសុទ្ធាភាស ព្រះអង្គបានរត់ទៅពួននៅស្ទឹងត្រែង ។ ក្នុងកំឡុងសករាជនេះទ័ពសៀម
+                                និងទ័ពលាវបានលុកលុយចូលក្រុងកម្ពុជាខាងជើង កងទ័ពទាំងនេះបានយកខេត្តស្ទឹងត្រែង
+                                រួចមកទ័ពទាំងនោះបានធ្វើដំណើរលុកលុយចុះតាមទន្លេធំ
+                                រហូតដល់កំពង់ចាមទើបកងទ័ពខ្មែរវាយបកដេញទ័ពសៀម និងទ័ពលាវខ្ចាត់ខ្ចាយចេញទៅវិញអស់ ។
+                                ក្រោយមកនៅគ្រិស្តសករាជ១៦០០ប្លាយ យួនចាប់ផ្តើមចូលលុកលុយយកខេត្តស្ទឹងត្រែង
+                                ប៉ុន្តែគ្រានោះទ័ពសៀមបានវាយចាញ់យួនទៅវិញនៅវេលាចំបាំងខេត្តស្ទឹងត្រែងចំណុះឱ្យខេត្តចំប៉ាសាក់
+                                ឯខេត្តចំប៉ាសាក់ចំណុះឱ្យស្រុកសៀមទៀត ។ នៅឆ្នាំ១៨១៤
+                                ទ័ពសៀមបានលុកលុយចូលនគរខ្មែរចាប់តាំងពីព្រំខេត្ត ព្រំទេពទៅដល់ភ្នំដងរែក
+                                ទ័ពសៀមបន្តលុកលុយយកខេត្តម្លូព្រៃ ខេត្តទន្លេពៅ
+                                កាលណោះទ័ពសៀមបានឈ្នះសឹកដោយងាយ។បន្ទាប់មកទៀតពួកគេបានបន្តឆ្លងទន្លេ
+                                ហើយចូលលុកលុយយកខេត្តស្ទឹងត្រែងជាថ្មី បញ្ចូលទៅក្រុងសៀម
+                                លុះខេត្តស្ទឹងត្រែងធ្លាក់ទៅជាខេត្តសៀម
+                                គ្រានោះព្រះករុណាក្រុងកម្ពុជាបានផ្តាច់ការទំនាក់ទំនងជាមួយប្រទេសលាវ
+                                ដោយសារខេត្តស្ទឹងត្រែងឃាំងជាប់ទៅនឹងស្រុកសៀម ។
+                                បន្ទាប់ពីក្រុងកម្ពុជាគំលាតនៃការទំនាក់ទំនងជាមួយប្រទេសលាវយូរឆ្នាំ រហូតដល់ឆ្នាំ១៨៦៣
+                                គ្រាដែលបារាំងបានមកតាំងអាណាព្យាបាលនៅក្រុងកម្ពុជា។នៅឆ្នាំ១៨៦៤
+                                ក្រុងសៀមជាប់សញ្ញានិងក្រុងបារាំងសែស ហើយក្រុងកម្ពុជា ពេលនោះសៀមបានប្រគល់ខេត្តទន្លេពៅ
+                                ម្លូព្រៃ ស្ទឹងត្រែង សៀមប៉ាងមកឱ្យកម្ពុជាវិញ ប៉ុន្តែសៀមគ្មានប្រាថ្នានឹងឱ្យមកវិញទាល់តែសោះ
+                                តែសៀមទាល់តម្រិះដោយសារជាប់កិច្ចសញ្ញា។ បន្ទាប់ពីសង្គ្រាមបារាំង-សៀម ឆ្នាំ១៨៩៣
+                                ស្ទឹងត្រែងត្រូវបានគ្រប់គ្រងដោយឡាវក្រោមបារាំងពីឆ្នាំ១៨៩៣ ដល់ឆ្នាំ១៩០៤ ។ នៅឆ្នាំ១៨៩៣
+                                បារាំងបានបង្ខំសៀមដោយថ្វីដៃ
+                                ដើម្បីឱ្យសៀមបង្វែរខេត្តខ្មែរមកឱ្យក្រុងកម្ពុជាវិញខ្លះដូចជា៖ខេត្តស្ទឹងត្រែង ជាដើម ។
+                                គ្រានោះសៀមភិតភ័យចុះសិទ្ធិសញ្ញានៅថ្ងៃទី១៣ ខែតុលា ឆ្នាំ១៨៩៣ ដោយសុខចិត្តលះបង់ចោលដីខេត្ត
+                                ហើយទឹកដីប៉ែកត្រើយខាងឆ្វេងទន្លេមេគង្គទាំងអស់ឱ្យបារាំងសែសវិញ ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                សេដ្ឋកិច្ចខេត្តស្ទឹងត្រែងពឹងផ្អែកលើវិស័យកសិកម្មតែប៉ុណ្ណោះ។ ចម្ការផ្សេងៗដូចជាឈើ កៅស៊ូ
+                                និងគ្រាប់ប្រាក់ត្រូវបានគេសាងសង់ពាសពេញខេត្ត។ ៨៥% នៃប្រជាជនរស់នៅក្នុងតំបន់ជនបទនៃខេត្ត
+                                ហើយពឹងផ្អែកលើវិស័យកសិកម្មសម្រាប់ប្រភពចំណូលរបស់ពួកគេ។ ការចិញ្ចឹមសត្វ ការនេសាទ
+                                និងការតម្បាញសូត្រក៏ជាឧស្សាហកម្មសំខាន់នៅក្នុងខេត្តផងដែរ។ សាជីវកម្មជាតិប្រេង ឧស្ម័ន
+                                និងលោហធាតុរបស់ប្រទេសជប៉ុនបានរកឃើញខ្សែក្រវាត់រ៉ែទង់ដែង
+                                និងស័ង្កសីនៅក្នុងខេត្តក្នុងឆ្នាំ២០១៩
+                                ហើយគ្រោងនឹងបង្កើនការរុករកបន្ថែមទៀតជាមួយដៃគូជប៉ុនដើម្បីទាញយករ៉ែ។
+                                ទីតាំង​រុក​រក​រ៉ែ​នេះ​មាន​ចម្ងាយ​ប្រហែល ២៦០ គីឡូម៉ែត្រ​ភាគ​ខាងជើង​រាជធានី​ភ្នំពេញ។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Stung Treng</h1>
 </body>
+
 </html>
