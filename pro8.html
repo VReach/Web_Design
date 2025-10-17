@@ -1,17 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Tbong Khmum</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#seals">និមិត្តសញ្ញាខេត្ត</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Tbong_Khmum_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ត្បូងឃ្មុំ គឺជាខេត្តនៃកម្ពុជាស្ថិតនៅវាលទំនាបកណ្ដាលនៃទន្លេមេគង្គ។
+                                មានព្រំប្រទល់ជាប់ខេត្តកំពង់ចាមនៅខាងលិច ក្រចេះនៅខាងជើង ព្រៃវែងនៅខាងត្បូង និង
+                                មានព្រំដែនអន្តរជាតិរួមជាមួយវៀតណាមនៅខាងកើត។ ទីរួមខេត្តហើយក៏ជាទីក្រុងធំបំផុតគឺសួង។
+
+                                ខេត្តត្បូងឃ្មុំត្រូវបានបង្កើតឡើងនៅពេលដែលខេត្តកំពង់ចាមត្រូវបានបំបែកជាពីរដោយព្រះរាជក្រឹត្យឡាយព្រះហស្តលេខានៅថ្ងៃទី៣១
+                                ខែធ្នូ ឆ្នាំ២០១៣ ដោយព្រះមហាក្សត្រព្រះបាទនរោត្តមសីហមុនី
+                                តាមអនុសាសន៍របស់សម្តេចនាយករដ្ឋមន្ត្រី ហ៊ុន សែន។
+                                ខេត្តនេះមានភាគរយខ្ពស់បំផុតនៃចំនួនជនជាតិចាមដែលកំពុងតែរស់នៅក្នុងប្រទេសគឺ ១១.៨% ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="seals">
+                    <h1>និមិត្តសញ្ញាខេត</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="text">
+                                <p>
+                                    មិត្តសញ្ញានេះមានរាងមូលព័ទ្ធដោយខ្សែពណ៌ត្នោតពីរជាន់ខាងក្រៅធំ ខាងក្នុងតូច
+                                    និងខណ្ឌដោយផ្ទៃពណ៌ស។ ផ្ទៃខាងក្នុងពណ៌ត្នោតស្រាល
+                                    ខណ្ឌដោយខ្សែពណ៌សរាងឆកោណតំណាងឱ្យសំណុលឃ្មុំ។ នៅចំកណ្ដាលមានរូបជើងពានពណ៌ត្នោត។
+                                    ចំណែកខាងផ្នែកខាងលើមានរំលេចអក្សរពណ៌ខៀវថា “ខេត្តត្បូងឃ្មុំ”។
+                                    ចំណែកនៅខាងក្រោមជើងពានមានលម្អដោយចង្វាយក្បាច់អង្គរ
+                                    ដែលមានផ្ទៃក្បាច់ពណ៌បៃតងរំលេចដោយទម្រង់ក្បាច់ពណ៌ស។
+                                    រង្វង់ខ្សែពីរជាន់ព័ទ្ធជុំវិញតំណាងឲ្យស្ថានីយបុរេប្រវត្តិសាស្រ្ត “បន្ទាយគូ ឬភូមិមូល”។
+                                    ខ្សែខាងក្រៅធំតំណាងឲ្យកំពែងដីខាងក្រៅឯខ្សែតូចខាងក្នុងតំណាងឱ្យដីទួលព័ទ្ធជុំវិញមាត់គូ
+                                    ដែលអ្នកខ្លះហៅថាកំពែងខាងក្នុង។ ចំណែកខ្សែសខណ្ឌពណ៌ត្នោតទាំងពីរតំណាងឱ្យគូទឹក។
+                                    តាមរយៈការស្រាវជ្រាវផ្នែកបុរាណវិទ្យាស្ថានីយ៍ “បន្ទាយគូឬភូមិមូល”
+                                    ជាកន្លែងមនុស្សរស់នៅតាំងពី ១០០០ឆ្នាំមុនគ្រិស្តសករាជ។
+                                    បន្ទាយគូនេះគេបានរកឃើញភាគច្រើននៅតំបន់ដីក្រហមក្នុងស្រុកមេមត់
+                                    និងពញាក្រែកនៃខេត្តត្បូងឃ្មុំ ហើយមួយចំនួនទៀតរកឃើញនៅតំបន់ដីក្រហមក្នុងស្រុកស្នួល
+                                    ខេត្តក្រចេះព្រមទាំងនៅក្នុងតំបន់ដីក្រហមនៃប្រទេសវៀតណាមផងដែរ។ លោក ប៊ែរណាហ្វីលីព
+                                    ហ្រូសលីយេ អ្នកស្រាវជ្រាវជនជាតិបារាំង បានកំណត់ឈ្មោះស្ថានីយ
+                                    និងវត្ថុដែលរកឃើញនៅតំបន់ខាងលើនេះថា “អារ្យធម៌មេមត់”
+                                    ដែលជាអរិយធម៌ចាស់ជាងគេនៅតំបន់ដីក្រហមនៅតំបន់អាស៊ីអាគ្នេយ៍។
+                                    ផ្ទៃខាងក្នុងគឺតំណាងសំបុកឃ្មុំ និងទឹកឃ្មុំ។
+                                    វត្ថុដ៏មានតម្លៃរបស់ឃ្មុំដែលអ្នកស្វែងរកឃ្មុំប្រាថ្នាចង់បាននោះ គឺ “ក្បាលទឹកឃ្មុំ”
+                                    ជាទីប្រមូលផ្ដុំដោយទឹកឃ្មុំមានរសជាតិផ្អែមឈ្ងុយឆ្ងាញ់ផង និងសម្រាប់ជាឱសថផ្សេងៗផង។
+                                    ប្រសិនបើយោងលើពាក្យ “កបាល” ឬ “ក្បាល”ជាពាក្យសំស្ក្រឹតត្រូវគ្នានឹងពាក្យខ្មែរថា “ត្បូង”។
+                                    ដូច្នេះពាក្យថា “ក្បាលទឹកឃ្មុំ” ដែលយើងប្រើសព្វថ្ងៃនេះ គឺប្រហែលជាអ្នកស្រុកហៅខ្លីថា
+                                    “ត្បូងឃ្មុំ” ដូច្នេះក៏មិនដឹង។ ម្យ៉ាងទៀត ឃ្មុំស្ថិតក្នុងអម្បូរសត្វល្អិតរស់នៅជាក្រុម
+                                    ដែលមានការតស៊ូអត់ធ្មត់ និងឧស្សាហ៍ព្យាយាម មានសាមគ្គីគ្នាល្អ។ ហេតុនេះ
+                                    ការយកឃ្មុំមកដាក់ក្នុងនិមិត្តសញ្ញានេះ ក៏ចង់បង្ហាញពីគ្នានិមិត្តរូបនៃការតស៊ូ
+                                    និងរួបរួមសាមគ្គីគ្នាជាធ្លុងមួយ។
+                                    ចំណែកទឹកឃ្មុំជានិមិត្តរូបនៃការរស់នៅដ៏ផ្អែមល្ហែមក្នុងសហគមន៍ក៏ដូចជាសង្គមជាតិទាំងមូល។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្ត​ត្បូងឃ្មុំ មានឈ្មោះ​ល្បីល្បាញ តាំងពី​សម័យ​លង្វែក​មក​ម្ល៉េះ
+                                ដោយសារ​តំបន់​នេះ​ទាក់ទង​ដល់​រឿង​ទុំ​ទាវ​។ ពី​មុន​ត្បូងឃ្មុំជា​ខេត្ត ឬ​ភូមិភាគ
+                                ដែល​បុរាណ​ហៅ​ថា “​ដី​”(​ក្សេត្រ​) គ្រប់គ្រង​ដោយ​ស្តេចត្រាញ់​មាន​ខេត្ត​ចំណុះ​ជា​ច្រើន​។
+                                ឯ​ប្រវត្តិ​ឈ្មោះ​ខេត្ត​នេះ​មានការ​ចង​ចាំ​ត​ៗ គ្នា ពី​មនុស្ស​មួយ​ជំនាន់​ទៅ​មួយ​ជំនាន់។
+                                ក្នុង​ដំណាល​នោះ​បាន​ពោ​លត​ៗ​គ្នា​ថា មូលហេតុ​ដែល​ស្រុក​នេះ​មានឈ្មោះ​ត្បូងឃ្មុំ
+                                ក៏​ដោយសារ​ពី​ដើម​មាន​ដើម​ស្ពុង​ធំ​មួយ​ដុះ​ជាប់​នឹង​ផ្លូវ
+                                ហើយ​នៅ​មែក​ស្ពុង​នោះ​មាន​ឃ្មុំ​ធំ​១​សំបុក​។ ឃ្មុំ​នោះ​កាច​ខ្លាំង​ណាស់
+                                ឲ្យ​តែ​មាន​អ្នកដំណើរ​ណា​ដើរ​តាម​ផ្លូវ ហើយ​វា​ធុំក្លិន​មនុស្ស
+                                ក៏​ហើរ​មក​ទិច​រត់​មិន​សព្វ​ដី​។ ឯ​អ្នក​ដែល​ត្រូវ​ឃ្មុំ​ទិច​នោះ​ចិត្តល្អ
+                                ក៏​ប្រាប់​អ្នកស្រុក​ឯទៀត​ថា បើ​ចង់​ឆ្លងកាត់​ត្រង់​ចំណុចដើម​ស្ពុង​នោះ
+                                ត្រូវ​ដើរ​ពី​ខាងត្បូង​ឃ្មុំ (​ខាងក្រោម​ខ្យល់​) ដើម្បី​កុំ​ឲ្យ​ឃ្មុំ​វា​ធំក្លិន
+                                បើ​ពុំនោះ​ទេ ច្បាស់​ជា​វា​ហើរ មក​ទិច​មិន​ខាន​។
+                                តាំងពី​ពេល​នោះ​មក​មនុស្ស​ក៏​ប្រាប់ត​ៗ​គ្នា ជាប់​ឈ្មោះ​ថា “​ត្បូងឃ្មុំ​”
+                                រហូត​ទល់​សព្វថ្ងៃ​។
+
+                                បើ​យោង​តាម​ឯកសារ​ខ្លះ​ក៏​ចារ​ទុក​យ៉ាងនេះ​ដែរ
+                                សូ​ម្បី​តែ​កាលពី​សម័យស្រីសន្ធរក្នុង​ពេល​យាយ​ផា​ន់
+                                កុហក​នាង​ទាវជា​កូនស្រីឲ្យ​មក​រៀប​ការ​ជាមួយម៉ឺន​ងួ​ន
+                                ក៏​ឧកញ៉ា​អជ៌ុនបាន​ចាត់​បរិវារ​ឲ្យ​បររទេះ​គោ
+                                រទេះក្របីដឹក​ភ័ស្តុភារ​ដង្ហែ​តាម​ផ្លូវ​ពី​ខាងត្បូង​ឃ្មុំ​ដែរ
+                                ហើយ​អ្នកចូលរួម​ក្នុង​ពិធី​រៀប​ការ​នោះ ត្រូវ​ទទួលទោស​ប្រហារជីវិត និង​ដាក់​បញ្ចូល​ជា
+                                “​អ្នកងារ​” ដែល​អ្នក​សិក្សា​អក្សរសិល្ប៍​ខ្មែរ រឿង​ទុំ​ទាវ សុទ្ធតែ​បានដឹង​គ្រប់​គ្នា​។
+                                ​ដោយឡែក​យោង​តាម​ឯកសារ​ខ្លះបាន​សរសេរ​ថាដើម​ឡើយ​នៅ​ទី​អារាម​ចាស់
+                                ដែល​មា​នទី​តាំងនៅ​លើ​ទួល​មួយ​នោះ
+                                គ្មាន​ព្រះសង្ឃ​គង់​នៅទេគឺ​មាន​តែ​យាយជី​ក្រមុំ​ម្នាក់​ឈ្មោះ កែ
+                                រស់នៅ​តែ​ម្នាក់ឯង​នៅ​ក្បែរ​វត្តមាន​ដើម​បេង​ដ៏​ធំ​មាន​ឃ្មុំ​១​សំបុកទំ​នៅ​លើ​មែក
+                                ហើយ​ឃ្មុំ​នេះ​កាច​ណាស់ គ្មាន​អ្នក​ណា​ហ៊ាន​ទៅ​ជិត​ទេ​។
+                                ដូនជី​នោះ​តែងតែ​ប្រាប់​អ្នកដំណើរ​ឲ្យ​ដើរ​ពី​ខាងត្បូង​ឃ្មុំ ដើម្បី​កុំ​ឲ្យ​ឃ្មុំ​ធុំក្លិន
+                                វា​មក​ទិច​មិន​ខាន​។ ពាក្យ​ថា “​ដើរ​ខាងត្បូង​ឃ្មុំ​” ក៏​ហៅ​យារ​ៗ​ក្លាយទៅជា “​ត្បូងឃ្មុំ​”
+                                វិញ​ពុំ​មែន​គុជឃ្មុំ ម្យ៉ាង​ដែល​គេ​ប្រើ​ធ្វើ​ត្បូងចិញ្ចៀន​នោះ​ទេ​។ ចំណេរ​តម​ក
+                                ដើម​បេង​នោះ ត្រូវ​ដើម​ជ្រៃ ដុះ​រឹតរួត​ខ្លាំង ក៏​ងាប់​ទៅ ប៉ុន្តែ ទីនោះ
+                                អ្នកស្រុក​មាន​ជំនឿ​ថា
+                                មាន​អ្នកតា​គង់​សណ្ឋិត​ដែល​អ្នកមាន​បណ្តា​ស័ក្តិដើរ​កាត់​មិន​បាន​ឡើយ​ច្បាស់ជា​ធ្លាក់បុណ្យ​ស័ក្តិ​។
+
+                                ដោយឡែក​ខេត្ត​ត្បូងឃ្មុំ ពី​បុរាណ​គ្រប់គ្រង​ដោយ​ស្តេចត្រាញ់ ស័ក្តិ​១០​ហ៊ូពាន់
+                                មាន​គោរម្យ៍ងារ​ជា “​អ្នកឧកញ៉ា​អជ៌ូន​”​។ ស្តេចត្រាញ់ មាន​អំណាច
+                                អាច​កាប់សំលាប់​ជន​ណា​ក៏​បាន ប៉ុន្តែ ក្រោយមក
+                                ព្រះមហាក្សត្រ​បាន​ដកសិទ្ធិ​អំណាច​បន្តិច​ម្តង​ៗ​។ សព្វថ្ងៃ ក្រុង​សួង ក៏​ដូច​ផ្សារ​សួង
+                                ជា​អតីត​ដែនដី​ស្រុក​ត្បូងឃ្មុំ ដែល​មាន​ដើម​ពោធិ៍​២​ដើម កាល​គេ​ចាប់​ទុំ ទៅ​សំលាប់
+                                និង​អតីត​ផ្ទះ​យាយ​ផា​ន់ ជា​តឹកតាង​ស្រាប់​៕
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Tbong Khmum</h1>
 </body>
+
 </html>

@@ -1,17 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Pailin</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Pailin_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ប៉ៃលិន ជា​ខេត្ត​មួយ​ឋិត​នៅ​ជ្រុង​ខាង​ជើង​នៃ​ជួរ​ភ្នំ​ក្រវាញ
+                                ត្រូវ​ជា​ភាគ​ខាង​លិច​នៃ​ព្រះរាជាណាចក្រ​កម្ពុជា មាន​ព្រំ​ប្រទល់​ជាប់​ជា​មួយ​ប្រទេស​ថៃ​។
+                                ខេត្ត​នេះ​ព័ទ្ធ​ជុំ​វិញ​ដោយ​ខេត្ត​បាត់ដំបង និង ត្រូវ​បាន​ផ្ដាច់​ចេញ​ពី​ខេត្ត​បាត់ដំបង
+                                ឱ្យ​ក្លាយ​ជា​តំបន់​រដ្ឋបាល​ដាច់​ដោយ​ឡែក បន្ទាប់​ពី​ការ​ចុះ​ចូល​របស់​ក្រុម​លោក​អៀង​ សារី
+                                នៅ​ឆ្នាំ ១៩៩៦។ ប៉ៃលិន​ត្រូវ​បាន​ពិភពលោក​ស្គាល់​ថា ជា​ជម្រក​ចុងក្រោយ​នៃ​ពួក​ខ្មែរ​ក្រហម
+                                ដែល​ឋិត​នៅ​ក្រោម​ការ​គ្រប់គ្រង​របស់​ពួក​គេ បន្ទាប់​ពី​បាន​ចាញ់​សង្គ្រាម​ នៅ​ឆ្នាំ ១៩៧៩
+                                និង ដើរ​តួ​ជា រដ្ឋធានី​នៃ រដ្ឋាភិបាល​បណ្ដោះ​អាសន្ននៃការ​រួបរួម​ជាតិ និង
+                                សង្គ្រោះ​ជាតិ​កម្ពុជា ។
+
+                                ខេត្តនេះគឺជាខេត្តដែលស្ថិតនៅក្រោមអាណាចក្រខ្មែរដ៏មានឥទ្ធិពល
+                                ប៉ៃលិនត្រូវបានដណ្តើមកាន់កាប់នៅឆ្នាំ១៥៥៨ ដោយពួកកងទ័ពភូមា
+                                ហើយក្រោយមកបានគ្រប់គ្រងដោយសៀមរហូតដល់ឆ្នាំ១៩០៧ និងម្តងទៀតពីឆ្នាំ១៩៤១ ដល់១៩៤៦
+                                (កម្ពុជាក្រោមការត្រួតត្រារបស់ជប៉ុន) នៅពេលដែលខេត្តប៉ៃលិនត្រូវបានប្រគល់មកអោយកម្ពុជាវិញ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/PL/Pailin-រមណីយដ្ឋានភ្នំយ៉ាត3.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ​តំបន់​រមណីយដ្ឋាន​វប្បធម៌ និង​ប្រវត្តិសាស្រ្ត
+                                    ដែល​ជា​វត្ត​ចាស់​សាង​សង់​ជា​រាង​វត្ត​កូឡា។​
+                                    ភ្នំ​យ៉ាត​មាន​ទី​តាំង​ស្ថិត​នៅ​ក្រុង​ប៉ៃលិន​ខាង​ស្តាំ​ដៃ​ពី​ទីក្រុង​ប៉ៃលិន​តាម​ផ្លូវ​ជាតិ​លេខ​១០។​
+                                    ភ្នំ​យ៉ាត​ជា​តំបន់​ដែល​មាន​អបិយជំនឿ​ខ្លាំង​ក្លា​ណាស់​សំរាប់​អ្នក​ដែល​រស់​នៅ​ក្រុង​ប៉ៃលិន
+                                    និង​អ្នក​ដំនើរ​ឆ្លង​កាត់​តំបន់​នោះ​
+                                    ជា​ពិសេស​ជា​តំបន់​ដែល​នៅ​សល់​រ៉ែ​ត្បូង​ច្រើន​ជាង​គេ​បង្អស់​នៅ​ក្នុង​ក្រុង​ប៉ៃ​លិន។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/PL/Pailin-រមណីយដ្ឋានអាងជីងចក់2.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ជា​តំបន់​ទេសចរណ៍​ទើប​បង្កើត​ថ្មី​ចំងាយ​ប្រមាណ​៤​គម​ពី​ទីក្រុង​មាន​លក្ខណៈ​ជា​ទំ​នប់​ស្ទាក់​ទឹក​សំរាប់​បំរើ​អោយ​វិស័យ​កសិកម្ម​ហើយ​មាន​ធ្វើ​ស្ពាន​ឆ្លង​កាត់​មាន​ទូក​សំ​រាប់​អុំ​និង​តូប​តូច
+                                    សំរាប់​អង្គុយ​ព្រម​ទាំង​មាន​សួន​ច្បារ​ផ្កា​ចំរុះ​ពណ៌​គួរ​ជា​ទី​គយ​គន់។​
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/PL/Pailin-រមណីយដ្ឋានអាងជីងចក់2.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ជារមណីយដ្ឋាន​ធម្មជាតិ​ដែល​ពោរពេញទៅ​ដោយ​ទេសភាព​ល្អ​ត្រកាល
+                                    រួម​ផ្សំ​ជាមួយ​នឹង​អូរ​ថ្លា​ឆ្វេង។
+                                    តំបន់នេះ​មាន​ទី​តាំង​ស្ថិត​នៅ​ក្នុង​សង្កាត់​អូរ​តាវ៉ៅ ខ័ណ្ឌ​ប៉ៃលិន មាន​ចំងាយ ៥គម
+                                    ពី​ក្រុង​ប៉ៃលិន។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                នៅដើមទស្សវត្សរ៍ឆ្នាំ៧០
+                                ប៉ៃលិនគឺជាទីក្រុងដែលមានភាពរីកចម្រើនដែលកើតចេញពីកន្លែងដាក់ត្បូងដ៏ច្រើនសន្ធឹកសន្ធាប់នៅតាមទីជនបទជុំវិញ។
+                                ដោយសារតែធនធានរបស់វា
+                                វាជាទីក្រុងមួយក្នុងចំណោមទីក្រុងដំបូងគេដែលត្រូវបានឈ្លានពានដោយខ្មែរក្រហម
+                                នៅពេលដែលពួកគេចាប់ផ្តើមវាយលុកប្រឆាំងនឹងរដ្ឋាភិបាលជាតិ។ ទីក្រុងនេះមិនមានការតស៊ូទេ
+                                ហើយទាហានខ្មែរក្រហមត្រូវបានស្វាគមន៍ជាអ្នករំដោះនៅពេលពួកគេដើរចូលទីក្រុង ត្រង់ចំណុចនេះ
+                                បានចងសម្ព័ន្ធភាពជាមួយខ្មែរក្រហម
+                                ហើយអ្នកស្រុកភាគច្រើនជឿថាពួកគេកំពុងប្រយុទ្ធដើម្បីស្តារទ្រង់ឡើងកាន់អំណាច។
+                                វាមិនយូរប៉ុន្មានទេ
+                                មុនពេលអ្នកស្រុកភាគច្រើនត្រូវបានបង្រួបបង្រួមសម្រាប់ការដើរក្បួនដោយបង្ខំទៅកាន់ជនបទដើម្បីធ្វើការនៅស្រែ។
+                                អ្នក​ដែល​គេ​ជឿ​ថា​មាន​ទំនាក់​ទំនង​ជាមួយ​រដ្ឋាភិបាល​ត្រូវ​បាន​គេ​សម្លាប់។
+                                ខ្មែរក្រហមបានប្រើប្រាស់ប្រាក់ចំណូលពីការជីកយករ៉ែនៅតំបន់ប៉ៃលិន
+                                ដើម្បីផ្តល់មូលនិធិដល់ការវាយលុករបស់ពួកគេ
+                                ហើយក្រោយមករដ្ឋាភិបាលរបស់ពួកគេនៅពេលដែលពួកគេទទួលបានអំណាចជាតិ។ នៅពេលដែល
+                                កងទ័ពវៀតណាមឈ្លានពានបានទម្លាក់ពួកគេចេញពីអំណាច ពួកគេបានដកថយទៅប៉ៃលិន
+                                ជាកន្លែងដែលអតីតមេដឹកនាំខ្មែរក្រហមជាច្រើននៅមានសព្វថ្ងៃ។<br><br>
+
+                                មេដឹកនាំខ្លះបានទៅពួនសម្ងំដោយភ័យខ្លាចចំពោះការផ្តន្ទាទោសចំពោះឧក្រិដ្ឋកម្មរបស់ពួកគេ
+                                ទោះបីជាមេដឹកនាំផ្សេងទៀតរស់នៅដោយបើកចំហនៅក្នុងខេត្តក៏ដោយ។ គេនិយាយថា៧០%
+                                នៃបុរសចំណាស់នៅតំបន់នោះគឺជាអ្នកប្រយុទ្ធសម្រាប់ខ្មែរក្រហម
+                                ប៉ុន្តែមិនទាន់មានអ្នកប្រយុទ្ធធម្មតាណាម្នាក់ត្រូវបាននាំយកមកកាត់ទោសនៅឡើយ។
+                                ត្រូវ​បាន​ប្រមូល​ផ្តុំ​ឡើង​ដើម្បី​ប្រឈម​មុខ​នឹង​យុត្តិធម៌​ដោយ​សាលាក្តី​អន្តរជាតិ​រួម​មាន
+                                ខៀវ សំផន និង នួន ជា។<br><br>
+
+                                ចាប់តាំងពីសង្គ្រាមមក ខេត្តប៉ៃលិនបានទទួលរងនូវការធ្លាក់ចុះនៃសេដ្ឋកិច្ច
+                                និងការបរាជ័យនៃអាជីវកម្មក្នុងស្រុក។ ទោះជាយ៉ាងណាក៏ដោយ
+                                តំបន់ដែលមានស្ថិរភាពនយោបាយនៅពេលនេះកំពុងមើលឃើញរលកថ្មីនៃទេសចរណ៍ផ្តោតលើប្រាសាទបុរាណ
+                                ព្រៃឈើធម្មជាតិ និងសត្វព្រៃ និងជាពិសេសទីផ្សារត្បូងមានតម្លៃ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                តំបន់ជុំវិញនេះ ធ្លាប់មានធនធានថ្មមានតម្លៃចម្រុះជាច្រើន ដែលត្រូវបានជីកយកប្រហែលជាចប់សព្វ
+                                ដើម្បីគាំទ្រកងខ្មែរក្រហម។ ពួកគេក៏បានកាប់ឈើយ៉ាងទូលំទូលាយផងដែរ
+                                បង្កឱ្យមានការបាក់បែកបរិស្ថានយ៉ាងធ្ងន់ធ្ងរ។ បច្ចុប្បន្ននេះ
+                                អ្វីដែលអាចរកបាននៅទីផ្សារកណ្តាលទីក្រុងប៉ៃលិន គឺតែថ្មមានតម្លៃគុណភាពទាប តម្លៃថោក
+                                និងត្រូវបានកាប់តដោយដៃប៉ុណ្ណោះ។<br>
+
+                                ផ្ទុយពីតំបន់ភាគច្រើននៃប្រទេសកម្ពុជា ប៉ៃលិនមានសភាពជាផ្ទៃដីខ្ពស់
+                                ដែលមិនសូវសមស្របសម្រាប់ដាំស្រូវទេ។
+                                ដូច្នេះវាបង្កើតការលំបាកយ៉ាងខ្លាំងសម្រាប់កសិករដែលពឹងផ្អែកលើកសិកម្មរស់នៅប្រចាំថ្ងៃ។
+                                នៅពេលដំណាំបរាជ័យ កសិករត្រូវចូលទៅប្រមូលអាហារ និងថ្មមានតម្លៃនៅក្នុងព្រៃ
+                                ដែលបង្កើនហានិភ័យនៃគ្រោះថ្នាក់គ្រាប់មីន។<br>
+
+                                កសិករជាច្រើនបានប្តូរទិសដៅ ដាំដំណាំដែលមិនមែនជាប្រពៃណី ដើម្បីលក់ក្នុងទីផ្សារ ដូចជា សេសាម៉ី
+                                (ស្លឹកត្រាំ), មាសកាណដូ (មង្គោ) និងសណ្តែកសៀង (សូយ៉ា)។ នៅឆ្នាំ ២០០៣–២០០៤
+                                ប៉ៃលិនបានផលិតពោតចំនួន ១៧,២០៤ តោន ដែលជាចំនួនផលិតខ្ពស់ទីពីរនៅក្នុងប្រទេស។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Pailin</h1>
 </body>
+
 </html>

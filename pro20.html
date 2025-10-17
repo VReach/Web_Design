@@ -1,17 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Kampong Chhnang</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Kampong_Chhnang_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                កំពង់ឆ្នាំង ជាខេត្តមួយ ស្ថិតនៅភាគកណ្តាលនៃប្រទេស កម្ពុជា។ ខេត្តកំពង់ឆ្នាំង
+                                ជាខេត្តល្បីខាងផលិតក្អមឆ្នាំងមានគុណភាពល្អ អំពីដី។ ខេត្តជិតខាងគឺ
+                                (ពីខាងជើងតាមទ្រនិចនាឡិកាវិល) កំពង់ធំ កំពង់ចាម កណ្ដាល កំពង់ស្ពឺ និង ពោធិ៍សាត់។
+                                ក្រុងទីរួមខេត្តកំពង់ឆ្នាំងគឺក្រុងកំពង់ឆ្នាំង។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/KPCHH/Prasat_Pros.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ទិដ្ឋភាពដ៏សោះកក្រោះនៅរដូវប្រាំង អាកាសធាតុក្តៅហួតហែង ផ្លូវថ្នល់ហុយទ្រលោមនៅជនបទ
+                                    ក្នុងឃុំច្រណូក ស្រុកកំពង់លែង ខេត្តកំពង់ឆ្នាំង ដែលមានប្រាសាទបុរាណជាច្រើន
+                                    ក៏បានទាក់ទាញចិត្ដភ្ញៀវទេសចរជាតិ និងអន្តរជាតិដែរ បើសិនជាអាជ្ញាធរខេត្ត ស្រុក ឃុំ ភូមិ
+                                    និងអ្នកពាក់ព័ន្ធចេះជំរុញផលិតផលសេវាកម្ម និងបង្ហាញរូបភាព ដែលមានអត្ថន័យ អត្ថរូប
+                                    និងអត្ថរសដ៏មានអត្ថប្រយោជន៍ទាំងនោះតាមបណ្តាញសង្គម និងប្រព័ន្ធផ្សព្វផ្សាយដទៃទៀត។
+                                    ជាក់ស្តែងដូចជាប្រាសាទប្រុស ឬប្រាសាទសក្ល ដែលស្ថិតនៅក្នុងឃុំច្រណូក ស្រុកកំពង់លែង
+                                    ខេត្តកំពង់ឆ្នាំង។ ប្រាសាទនេះកសាងឡើងនៅក្នុងសតវត្សរ៍ទី៨ នៃរចនាបថកំពង់ព្រះ។
+                                    ប្រាសាទប្រុស មានទីតាំងស្ថិតនៅកណ្តាលវាលស្រែ ដែលមើលទៅគួរឲ្យចាប់អារម្មណ៍ផង
+                                    អាណិតខ្លោចចិត្តផង និងងឿងឆ្ងល់ផងដែរ។ ហេតុអ្វីដូនតាខ្មែរកសាងប្រាសាទនេះ
+                                    នៅដាច់ឆ្ងាយពីគេឯងម្ល៉េះ? ឬមួយកាលពីសម័យមុន
+                                    ប្រាសាទនេះស្ថិតនៅជិតភូមិឋានប្រជារាស្ត្រដែរមែនទេ?ទោះបីជាយ៉ាងណាក៏ដោយ ក៏នៅមានភ្ញៀវទេសចរ
+                                    និងក្រុមអ្នកស្រាវជ្រាវមានការចាប់អារម្មណ៍ ស្វែងយល់ និងបានទៅដល់ប្រាង្គប្រាសាទនេះដែរ។
+                                    ភ្ញៀវទេសចរ ដែលចូលចិត្តរុករក ស្រាវជ្រាវ និងដើរកម្សាន្តទៅកាន់តំបន់ទេសចរណ៍ប្លែកៗ ឆ្ងាយៗ
+                                    ហើយប្រាថ្នាចង់ឃើញទិដ្ឋភាព និងទេសភាពបែបនេះ
+                                    គឺច្បាស់ជាត្រូវតែទៅផ្តិតយករូបភាពប្រាសាទបុរាណក្នុងស្ថានភាព
+                                    និងទីតាំងដូចដែលបានរៀបរាប់ខាងលើនេះជាមិនខាន
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/KPCHH/Kampong_Preah.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ក្រុមប្រាសាទកំពង់ព្រះមានទីតាំងស្ថិតនៅក្នុង ភូមិកំពង់ព្រះ ឃុំឆ្នុកទ្រូ ស្រុកបរិបូណ៌
+                                    ខេត្តកំពង់ឆ្នាំង។ដើម្បីទៅដល់ទីទួលប្រាសាទ ភ្ញៀវទេសចរជាតិ និងអន្តរជាតិ
+                                    អាចធ្វើដំណើរស្របតាមបណ្ដោយផ្លូវជាតិលេខ៥ ចេញពីក្រុងកំពង់ឆ្នាំង មានចម្ងាយ
+                                    ៤១គីឡូម៉ែត្រ។មកដល់ចំណុចផ្សារពន្លៃ មានផ្លូវបំបែកមួយ(ច្រមុះជ្រូក)នៅខាងស្ដាំដៃ
+                                    ឃើញសាលាស្រុកបរិបូណ៌ រួចបត់តាមផ្លូវនោះជិះទៅត្រង់ ប្រមាណ
+                                    ៣គីឡូម៉ែត្រ។យើងនឹងទៅដល់ទីតាំងជាក់ជាមិនខាន។សូមបញ្ជាក់ផងដែរ
+                                    នៅរដូវវស្សាយើងអាចធ្វើដំណើរតាមផ្លូវទឹក ដោយជិះទូកឬកាណូត នៅរដូវប្រាំងទឹកស្រកវិញ
+                                    យានយន្តគ្រប់ប្រភេទអាចបើកទៅដល់កន្លែងប្រាសាទបានយ៉ាងងាយស្រួលតែម្ដង។ប្រាសាទកំពង់ព្រះកសាងឡើងនៅលើដីកោះមួយកន្លែង
+                                    ក្នុងបរិវេណវត្ត ទួលព្រះស្រីពិជ័យសូរ្យវង្សកំពង់ព្រះ
+                                    ឬវត្តកំពង់ព្រះ។នៅទីនោះយើងឃើញមានតួប្រាសាទពីរឈរទន្ទឹមគ្នា យ៉ាងសង្ហា
+                                    ដែលប្រាសាទទាំងពីរនេះ អ្នកស្រុកហៅថា ប្រាសាទប្រុស ប្រាសាទស្រី
+                                    និងគ្រឹះប្រាសាទទីបីមួយទៀតនៅក្បែរនោះដែលរលំបាក់កប់ទៅក្នុងដីបាត់រូបរាងស្ទើរតែស្រុងអស់ទៅហើយ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                សំណល់បុរាណវត្ថុពីតំបន់នេះត្រូវបានគេដឹងថាចំណោមវត្ថុបុរាណជាច្រើនដែលគេរកឃើញនោះគឺមកពីទ្វារវត្តី
+                                អតីតនគរមួយដែលបច្ចុប្បន្នស្ថិតក្នុងប្រទេសថៃសព្វថ្ងៃ ដោយចុះកាលបរិច្ឆេទពីសតវត្សទី៦ ដល់
+                                ទី១១។<br><br>
+                                ខេត្តកំពង់ឆ្នាំងកាលពីប៉ុន្មានសតវត្សកន្លងទៅគឺជាទីក្រុងឆ្នេរនៅតាមច្រកផ្លូវរវាង ចិន និង
+                                ឥណ្ឌា ដោយសារតែការហូរនាំដីល្បប់ពីទន្លេមេគង្គ
+                                ខ្សែឆ្នេរបានកាន់តែឃ្លាតឆ្ងាយពីសមុទ្រឆ្ងាយៗទៅ។
+                                នៅពេលដែលទន្លេសាបបានផ្លាស់ប្ដូរខ្សែទឹកហូររបស់វា
+                                ទីក្រុងនេះក៏បានបាត់បង់ប្រភពទឹកដ៏សំខាន់របស់ខ្លួន និងដូច្នេះវាក៏បានក្លាយជារហោស្ថាន
+                                ប្រជាជនក៏រើលំនៅទៅកាន់ទីក្រុងមួយដែលគេហៅថា កំពង់ត្រឡាច។
+                                ទីក្រុងមួយបានកកើតបន្តិចៗម្ដងជុំវិញទីនោះ ដែលនាំមកនូវជីវិតថ្មីដល់កំពង់ឆ្នាំង។
+                                សារមន្ទីរមួយបង្ហាញនូវកំណត់ត្រាបុរាណវិទ្យាអំពីប្រវត្តិរបស់ទីក្រុងមួយនេះ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                សេដ្ឋកិច្ចខេត្ត​កំពង់ឆ្នាំង​ពឹងផ្អែកទាំងស្រុង​លើការនេសាទ ការបង្កបង្កើនផលស្រូវ
+                                បន្លែផ្លែឈើ និងរោងចក្រកាត់ដេរ។ ជាពិសេសនៅតាមតំបន់ជនបទ
+                                គេចិញ្ចឹមជីវិតដោយ​ធ្វើកសិកម្ម​និងការងាររាយរងច្រើនយ៉ាងទៀត។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Kampong Chhnang</h1>
 </body>
+
 </html>

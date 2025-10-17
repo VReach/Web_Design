@@ -1,17 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Kandal Province</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">ភូមិសាស្ត្រ</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Kandal_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                កណ្តាល គឺជាខេត្តនៃប្រទេសកម្ពុជាដែលមានទីតាំងនៅប៉ែកអាគ្នេយ៍នៃប្រទេសនេះ។ ខេត្តកណ្តាល
+                                បានបង្ហាញថា មានសក្ដានុពលជាច្រើនដូចជា វិស័យកសិកម្ម ឧស្សាហកម្ម និង ទេសចរណ៍
+                                ជាដែលវិស័យគោលចម្បងក្នុងការអភិវឌ្ឍសេដ្ឋកិច្ចខេត្តទទួលបានការរីកចម្រើន។ រីឯសម្រាប់ប្រព័ន្ធ
+                                ហេដ្ឋារចនាសម្ព័ន្ធនៅខេត្តកណ្ដាលគឺជា ខេត្តមានផ្លូវជាតិធំសំខាន់ៗជាច្រើន
+                                សម្រាប់តភ្ជាប់ទៅកាន់បណ្ដាខេត្តនានា។ ខេត្តកណ្ដាល ក៏មានស្ពានធំៗឆ្លងទន្លេផងដែរ នឹងមាន
+                                ព្រលានយន្តហោះកម្រិតអន្តរជាតិមួយ១កន្លែងផងដែរ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>ភូមិសាស្ត្រ</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/KDL/nhabited-regions-map-of-Kandal-Province.png" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ខាងកើតជាប់ខេត្តព្រៃវែង<br>
+                                    ខាងត្បូងជាប់ ខេត្តតាកែវ<br>
+                                    ខាងកើតឈៀងខាងជើងជាប់ ខេត្តកំពង់ចាម<br>
+                                    ខាងកើតឈៀងខាងត្បូងជាប់នឹង វៀតណាម។ ទីរួមខេត្ត គឺក្រុងតាខ្មៅ ដែលមានចំងាយ ១១ គម
+                                    ខាងត្បូងនៃ[ភ្នំពេញ]។
+                                    កណ្ដាលគឺជាខេត្តមួយក្នុងចំណោមខេត្តដែលស្ដុកស្ដម្ភជាងគេក្នុងប្រទេស។
+                                    ខេត្តកណា្តលមានស្រុកចំនួន១១ ក្រុង១ ឃុំ១៤​៧ ភូមិចំនួន១០៨៧ និង១៤៧សង្កាត់
+                                    មានប្រជាជនចំនួន ១០៧៥១២៥នាក់ ហើយខេត្តនេះផងដែរមានផែ្ទដី ៣៥៦៨គីឡូម៉ែតការេ។
+                                    ហើយខេត្តនេះផងដែរមានផែ្ទដី ៣៥៦៨ សហាតិមាត្រការ៉េ
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="text">
+                                <p>
+                                    ឃុំសំរោងលើស្រុកអង្គស្នួលខេត្តកណ្ដាល។<br>
+                                    ខេត្តកណ្ដាលព័ទ្ធជុំវិញរាជធានីភ្នំពេញទាំងមូល។
+                                    ខេត្តនេះក៏ជាប៉ែកមួយនៃផ្ទៃទីក្រុងមេភ្នំពេញធំជាងគេដែលមានប្រជាជនមួយលាននាក់រស់នៅក្នុង
+                                    និង ព័ទ្ធជុំវិញខេត្ត។ កាលណាយើងធ្វើដំណើរចេញពីភ្នំពេញ
+                                    ព្រំដែនរវាងខេត្ត-រាជធានីទាំងពីរស្ទើរតែមើលមិនដឹង។
+
+                                    ខេត្តនេះប្រកបដោយផ្ទៃដីសើមទំនាបមានលក្ខណៈធម្មតា ដែលគ្របដណ្ដប់ដោយវាលស្រែ និង
+                                    ដីដាំដំណាំកសិកម្មដទៃទៀត។ រយៈកំពស់មធ្យមរបស់ខេត្តមិនលើសពី ១០ មាត្រ
+                                    លើកំរិតទឹកសមុទ្រឡើយ។
+                                    ខេត្តក៏មានលក្ខណៈពិសេសដោយសារទន្លេធំបំផុតពីរនៅក្នុងប្រទេសនេះហូរកាត់ ទន្លេទាំងពីរនោះគឺ
+                                    ទន្លេបាសាក់ និង មេគង្គ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តកណ្តាល​​ជា​ឈ្មោះខេត្ត​មួយ​ក្នុង​រចនាសម្ព័ន្ធគ្រប់គ្រង​រដ្ឋបាល​នៃ​ប្រទេស​កម្ពុជា
+                                ពាក្យ​នេះ​ពុំ​ដឹង​ជា​មាន​ប្រវត្តិ​និង​ប្រភពដើម​យ៉ាងណា​ទេ​តែ​តាម​ការ​ស្រាវ​ជ្រាវ​បាន​ឱ្យ​ដឹង​ថា​ក្នុង​​ផែន​ដី​ព្រះ​បាទ​នរោត្តម
+                                (១៨៦០-១៩០៤) និង​ផែន​ដី​ព្រះបាទ​ស៊ីសុវត្ថិ (១៩០៤-១៩២៧)
+                                ព្រះរាជាណាចក្រ​កម្ពុជា​ចែក​ចេញ​ជា​ច្រើន​ខេត្ត​ក្នុង​នោះ​ពុំ​មាន​ឈ្មោះខេត្ត​កណ្តាលទេ
+                                កាលនោះឈ្មោះខេត្តមួយ​ចំនួន​ជា​ឈ្មោះស្រុក​សព្វថ្ងៃ​ដូចជា​ ស្រុកល្វាឯម ស្រុកស្អាង
+                                ស្រុកកោះធំ ស្រុកកណ្តាលស្ទឹង​ ជាដើម (ឯកសារមហាបុរសខ្មែរ)។
+                                បើតាម​កំណត់​ត្រា​ចារឹក​នៅចេតិយអង្គឌួង​និង​ចេតិយ​បុរាណ​ជាច្រើន​ទៀត​លើ​ភ្នំព្រះ​រាជទ្រព្យ​
+                                ស្រុកពញាឮ យើងយល់ថា​ក្នុង​រាជ​ព្រះបាទ​នរោត្តម ស៊ីសុវត្ថិ ភ្នំព្រះរាជទ្រព្យនេះ​ស្ថិត​ក្នុង
+                                ស្រុកសំរោងទង​ (ឈ្មោះ​ស្រុកមួយរបស់ខេត្តកំពង់ស្ពឺសព្វថ្ងៃ)
+                                តែ​ក្រោយ​មកក្នុង​រាជ្យ​ព្រះ​បាទ​ស៊ីសុវត្ថិ-​មុនីវង្ស (១៩២៧-១៩៤១)
+                                មាន​ការ​រៀបចំ​ព្រំ​ប្រទល់​ខេត្ត​ជា​ថ្មី​ទើប​បាន​ជា​ភ្នំព្រះ​រាជទ្រព្យត្រូវ​ស្ថិត​នៅ​ក្នុង​ខេត្ត​កណ្តាល​វិញ
+                                (កំណត់ត្រា​ចារឹកចេតិយ​ព្រះ​ស៊ីសុវត្ថិ) ដូចនេះ
+                                យើង​អាច​សន្និដ្ឋាន​បាន​ថា​ខេត្ត​កណ្តាល​កើត​មាន​ក្នុង​រចនា​សម្ព័ន្ធរដ្ឋបាល​ចាប់​តាំង​ពី​រាជ្យ​ព្រះ​បាទ​ស៊ីសុវត្ថិ​-មុនីវង្ស
+                                សម័យដែល​អាណានិគម​បារាំង​គ្រប់គ្រង។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តកណ្ដាលដើរតួជាខ្សែក្រវាត់សេដ្ឋកិច្ចនៃរាជធានីភ្នំពេញ។ ការធ្វើកសិកម្ម និង
+                                ការនេសាទគឺជាឧស្សាហកម្មសំខាន់ពីរនៃខេត្តនេះ។ ផលិតផលសំខាន់រួមមាន ប្រេងដូង សណ្ដែកដី ស្រូវ
+                                និង ម្រេច។ បន្ថែមពីការធ្វើស្រែចម្ការ និង ការនេសាទត្រី
+                                ខេត្តនេះក៏ទ្រទ្រង់ឧស្សាហកម្មផលិតតាមផ្ទះដែលកំពុងរីកលូតលាស់ មានឯកទេសខាងចម្លាក់ឈើ សូត្រ និង
+                                សិប្បកម្ម។ រោងចក្រកាត់ដេរជាច្រើនស្ថិតនៅខេត្តកណ្ដាល ដែលបានផ្ដល់ការងារដល់កម្មករច្រើនជាង
+                                ៥០០ ០០០ នាក់។<br>
+                                ប្រជាជនខេត្តកណា្តលភាគច្រើនប្រកបរបរកសិកម្ម ដាំដំណាំ ក្រៅពីនេះរដូវធើ្វស្រែ
+                                ពួកគាត់មានរបរមួយទៀតគឺ របរឡើងត្នោត និងធើ្វស្រូវប្រាំង ព្រមទាំងដាំដំណាំផ្សេងៗទៀត
+                                ដើម្បីផ្គត់ផ្គង់ជីវភាពគ្រួសាររបស់ខ្លួន។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Kandal</h1>
 </body>
+
 </html>

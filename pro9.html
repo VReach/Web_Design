@@ -1,17 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Kampong Cham</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Kampong_Cham_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តកំពង់ចាម គឺជាខេត្តមួយរបស់ប្រទេសកម្ពុជា ដែលស្ថិតនៅលើដីទំនាបកណ្តាលនៃទន្លេមេគង្គ។
+                                មានព្រំប្រទល់ជាប់ខេត្តកំពង់ឆ្នាំងនៅខាងលិច ខេត្តកំពង់ធំនិងខេត្តក្រចេះខាងជើងនិងឦសាន
+                                ខេត្តត្បូងឃ្មុំនៅខាងកើត និងខេត្តព្រៃវែងនិងខេត្តកណ្តាលនៅខាងត្បូង។
+                                ខេត្តកំពង់ចាមត្រូវបានបែងចែកជាផ្លូវការជាពីរខេត្តនៅថ្ងៃទី៣១ ខែធ្នូ ឆ្នាំ២០១៣
+                                ដី​ទាំង​អស់​នៅ​ខាង​លិច​ទន្លេ​មេគង្គ​នៅ​តែ​ជា​ខេត្ត​កំពង់ចាម
+                                នៅដីនៅខាងកើតទន្លេមេគង្គក្លាយជាខេត្តត្បូងឃ្មុំ។ មុនពេលការបែងចែកនេះ
+                                ខេត្តកំពង់ចាមបានលាតសន្ធឹងទៅខាងកើតជាប់ព្រំដែនអន្តរជាតិជាមួយប្រទេសវៀតណាម ជាខេត្តធំទី១១
+                                នៃប្រទេសកម្ពុជា ហើយមានប្រជាជនចំនួន ១ ៦៨០ ៦៩៤ នាក់
+                                គឺជាខេត្តដែលមានប្រជាជនច្រើនជាងគេនៅក្នុងប្រទេសកម្ពុជា។
+                                ខេត្តកំពង់ចាមមានទីរួមខេត្តកំពង់ចាមជាទីក្រុង។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/KPC/រូបភាព.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រាសាទគុកព្រីងជ្រុំ មានទីតាំងស្ថិតនៅភូមិព្រីងជ្រុំ ឃុំព្រីងជ្រុំ ស្រុកជើងព្រៃ
+                                    ខេត្តកំពង់ចាម ចម្ងាយប្រមាណ ៣០០ ម៉ែត្រ ប៉ែកអាគ្នេយ៍វត្តព្រីងជ្រុំ និងចម្ងាយប្រមាណ ៥
+                                    គីឡូម៉ែត្រ​ ប៉ែកខាងលិចប្រាសាទគុកត្រពាំងស្រុក។ ពាក្យ “គុក”
+                                    ជាពាក្យអ្នកស្រុកហៅសំដៅដល់ប្រាសាទ រីឯឈ្មោះថា “ព្រីងជ្រុំ” សំដៅដល់ឈ្មោះភូមិសាស្រ្ត។
+                                    ដូច្នេះ គុកព្រីងជ្រុំ សំដៅដល់ប្រាសាទដែលស្ថិតនៅព្រីងជ្រុំ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/KPC/e19e99e19eb6e19e99e19fa0e19fa2.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រវត្តិប្រាសាទគុកយាយហមមានប្រវត្តិជារឿងព្រេងនិទាន
+                                    និងប្រវត្តិពិតទាក់ទងនឹងការកសាងប្រាសាទនេះផង។ រឿងព្រេងនោះ គ្រាន់តែជាការនិទានតៗគ្នា
+                                    ពីដូនចាស់ម្នាក់មានឈ្មោះថាយាយហម ដែលបានបូជាជីវិតដើម្បីការពារ
+                                    ថែរក្សាទ្រព្យសម្បត្តិនៅក្នុងប្រាសាទនេះ នៅក្នុងសម័យសង្គ្រាម
+                                    ដូចនេះហើយក្រោយពីយាយហមស្លាប់ទៅគេក៏ដាក់ប្រាសាទនេះថា ប្រាសាទយាយហមជាប់រហូតមកដល់សព្វថ្ងៃ។
+                                    ចំណែកនៅខាងមុខប្រាសាទនៅពេលបច្ចុប្បន្នមានអាស្រមមួយដែលជាសក្ការៈ
+                                    ដែលមានរូបសំណាក់យាយហមនៅខាងសម្រាប់ជាកន្លែងសក្ការៈរបស់យាយហម។
+                                    ចំណែកតាមរយៈការសិក្សាអំពីប្រវត្តិពិតប្រាសាទនេះត្រូវបានកសាងឡើងដោយ
+                                    បុព្វបុរសខ្មែរនាសម័យអង្គរនៅក្រោមរជ្ជកាលព្រះបាទជ័យវរ័្មនទី៧
+                                    ប៉ុន្តែតាមរយៈសំណង់នៃសំណង់ស្ថាបត្យកម្មនៅទីនោះ ជាទីសក្ការបូជាមួយតាំងពីសម័យអង្គរ
+                                    គឺប្រហែល នៅសតវត្សរ៍ទី៧,៨នៃគ.ស ហើយប្រហែលជា ក្រោយមកសំណងនោះត្រូវបានខូចខាតទៅ
+                                    ទើបនៅសម័យអង្គរ ព្រះមហាក្សត្រខ្មែរបានស្ថាបនា ជាសំណង់ប្រាសាទមួយថ្មីនៅទីនោះ
+                                    តែមិនមែនសង់ពីលើគ្រឹះប្រាសាទចាស់ទេ គឺគ្រាន់តែសង់នៅលើបរិវេណនៃប្រាសាទពីមុន។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/KPC/Prasat_Cheung_An.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រាសាទជើងអង គឺជាសំណង់ឥដ្ឋនៃសម័យ អាណាចក្រខ្មែរ ក្នុង ខេត្តត្បូងឃ្មុំ ប្រទេសកម្ពុជា ។
+                                    ប្រាសាទ​ជើង​អងត្រូវ​បាន​គេ​ដាក់​តាំង​នៅ​ចំ​កណ្តាល​ក្បូន​រាង​ការ៉េ​តាម​ការ​កំណត់​ស្តង់ដារ​នៃ​ប្រាសាទ​បុរាណ​ខ្មែរ។
+                                    មានចម្ងាយ 10 គីឡូម៉ែត្រខាងជើងឈៀងខាងកើតនៃទីតាំងទីក្រុងស្រឡប់ដូនតីវិជ័យព្រៃនគរ
+                                    (ឥន្ទ្របុរៈបុរាណ)។ប្រាសាទ​នេះ​សង់​ឡើង​ដោយ​ឥដ្ឋ​ដោយ​មាន​ទ្រនុង
+                                    និង​ទ្វារ​បញ្ឆោត​នៅ​ខាង​លិច ខាងជើង និង​ខាងត្បូង។
+                                    ទ្វារ​ខាង​កើត​មាន​ស៊ុម​ថ្ម​ដែល​មាន​សសរ​ឈើ​ដើម្បី​លម្អ
+                                    និង​ផ្ដែ​ដែល​ឆ្លាក់​យ៉ាង​ល្អិតល្អន់។ ការបិទទ្វារខាងក្នុងមានភាពរលោង និងមានសិលាចារឹក។
+                                    ទាំងនេះផ្តល់កាលបរិច្ឆេទនៃ ៩៣២ នៃគ.ស (មហាសករាជ ឆ្នាំ ៨៥៤) ។
+                                    ប្រាសាទ​នេះ​ដើម​ឡើយ​សម្រាប់​ឧទ្ទិស​ដល់ ​ព្រះ​សិវៈ
+                                    ប៉ុន្តែ​ឥឡូវ​ជា​ថ្វាយ​ព្រះពុទ្ធ​សាសនា។
+                                    សិលាចារឹក​ខាង​ក្នុង​ត្រូវ​បាន​គេ​ហៅ​ថា K.99
+                                    តាម​ប្រព័ន្ធ​លេខ​ដែល​ទទួល​យក​ជា​ទូទៅ​សម្រាប់​កំណត់ត្រា​ខ្មែរ។ [១] កំណត់ត្រាជា
+                                    ភាសាសំស្ក្រឹត និង ខ្មែរចាស់ ត្រូវបានបោះពុម្ពដោយ Georges Cœdès ក្នុងឆ្នាំ ១៩៥៤។
+                                    ថ្មីៗនេះ សិលាចារឹកត្រូវបានសិក្សា និងបោះពុម្ពលើអ៊ីនធឺណិតដោយ Philip Jenner ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តកំពង់ចាមគឺជាទឹកដីដ៏ចំណាស់មួយមានស្លាកស្នាមប្រវត្តិសាស្រ្តសម័យមុនអង្គរ
+                                និងសម័យក្រោយមកទៀតដ៏ច្រើនសន្ធឹកសន្ធាប់។​ខេត្តកំពង់ចាមមានប្រាសាទបុរាណ ទួលបុរាណ
+                                ព្រមទាំងបុរាណវត្ថុផ្សេងៗនៅសេសសល់ជាច្រើនកន្លែងណាស់នៅក្នុងទឹកដីខេត្តមួយនេះ។
+                                មិនតែប៉ុណ្ណោះមានទាំងធនធានធម្មជាតិដូចជា ព្រៃ ភ្នំ ទីវាល ទន្លេ​ បឹង និងប្រភពទឹកផ្សេងៗ
+                                ដែលជាសក្តានុពលសម្រាប់វិស័យទេសចរណ៍ និងការវិនិយោគ។ ខេត្តកំពង់ចាមមានតំបន់ទេសចរណ៍ដូចជា
+                                ប្រាសាទនគរបាជ័យ ប្រាសាទភ្នំជើងព្រៃ ប្រាសាទភ្នំហាន់ជ័យ ប្រាសាទព្រះធាតុទឹកឆា
+                                ប្រាសាទភ្នំត្រប់ ភ្នំប្រុស ភ្នំស្រី កសិទេសចរណ៍ថ្មដាទឹកឆា និងឆ្នេរខ្សាច់កោះប៉ែនជាដើម។
+                                ខេត្តកំពង់ចាមគឺជាខេត្តមួយ​ ដែលមានវ័យចំណាស់មួយនៅក្នុងប្រទេសកម្ពុជា
+                                ហើយស្ថិតនៅភាគខាងជើងឆៀងខាងកើតរាជធានីភ្នំពេញ។ខេត្តនេះមានចម្ងាយប្រហែល
+                                ១២៤គីឡូម៉ែត្រពីរាជធានីភ្នំពេញ ដែលកាត់តាមផ្លូវជាតិលេខ៦ និងផ្លូវជាតិលេខ៧។
+                                ខេត្តកំពង់ចាមមានផ្ទៃដីចំនួន ៤៥៤៩គីឡូម៉ែត្រការ៉េ ដែលមានក្រុងចំនួន ១ ស្រុកចំនួន៩
+                                ឃុំចំនួន១៦៩ សង្កាត់ចំនួន៤ ភូមិចំនួន១៧៥៨។ កាលដើមឡើយខេត្តកំពង់ចាមក្រុងចំនួន២
+                                និងស្រុកចំនួន១៤ នៅដើមអាណត្តិនៃរាជរដ្ខាភិបាលកម្ពុជាបានបំបែកខេត្តនេះជាពីរនៅថ្ងៃទី៣១ ខែធ្នូ
+                                ឆ្នាំ២០១៣ ដោយព្រះករុណាព្រះបាទនរោត្តម សីហមុនី ព្រះមហាក្សត្រនៃព្រះរាជាណាចក្រកម្ពុជា។
+                                ខេត្តនេះស្ថិតនៅវាលទំនាបកណ្តាលនៃទន្លេមេគង្គ ដែលមានព្រំប្រទល់ខាងលិចជាប់ខេត្តកំពង់ឆ្នាំង
+                                ខាងជើងជាប់ខេត្តកំពង់ធំ និងខេត្តក្រចេះ ខាងកើតជាប់ខេត្តត្បូងឃ្មុំ ខាងត្បូងជាប់ខេត្តកណ្តាល
+                                និងខេត្តព្រៃវែង។
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Kampong Cham</h1>
 </body>
+
 </html>

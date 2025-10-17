@@ -1,17 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Siemreap</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Siem_Reap_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តសៀមរាប
+                                គឺជាខេត្តមួយដែលមានទីតាំងស្ថិតនៅភាគពាយ័ព្យនៃព្រះរាជាណាចក្រកម្ពុជា។ទីរួមខេត្តរបស់ខេត្តសៀមរាបគឺក្រុងសៀមរាបនិងក្រុងរុនតាឯក។ខេត្តសៀមរាបត្រូវបានដាក់ឈ្មោះបែបនេះគឺដើម្បីរំលឹកដល់ជ័យជម្នះរបស់កងទ័ពខ្មែរវាយឈ្នះលើកងទ័ពសៀមនៅសម័យលង្វែកក្នុងសតវត្សរ៍ទី
+                                ១៦។សព្វថ្ងៃខេត្តសៀមរាបត្រូវបានគេស្គាល់ទូទាំងពិភពលោកថាជាទីតាំងនៃប្រាសាទអង្គរវត្តដ៏ល្បីល្បាញ។ខេត្តនេះគឺជាតំបន់ទេសចរណ៍ដ៏សំខាន់របស់ប្រទេសកម្ពុជាដោយសារខេត្តនេះមានប្រាសាទអង្គរវត្តដ៏ល្បីល្បាញនិងប្រាសាទបុរាណដទៃទៀតជាច្រើន។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/SR/Buddhist_monks_in_front_of_the_Angkor_Wat.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រាសាទអង្គរវត្ត
+                                    គឺជាស្នាដៃស្នូលនៃតំបន់អង្គរដែលត្រូវបានចុះបញ្ជីជាបេតិកភណ្ឌពិភពលោករបស់អង្គការយូនេស្កូ
+                                    (UNESCO) ដែលផ្ទុកអសារស្នាដៃនៃអរិយធម៌ខ្មែរ។ ប្រាសាទអង្គរវត្តមានបង្គោលប្រាំ
+                                    ដែលឡើងជាបន្ទុកៗដល់បង្គោលកណ្តាលដ៏អស្ចារ្យមួយ ដែលតំណាងឲ្យភ្នំមេរូ (Mount Meru)
+                                    ក្នុងទេវកថាហិណ្ឌូ។
+
+                                    ជញ្ជាំងជាច្រើននៃប្រាសាទត្រូវបានចារទុកដោយសិលាចារឹក
+                                    និងរូបចម្លាក់បង្ហាញពីរឿងព្រេងនិទានសាសនាហិណ្ឌូ។ រូបចម្លាក់បាសរ៉េលីហ្វ (bas-reliefs)
+                                    ទាំងនេះគឺជាផ្នែកសំខាន់បំផុត ដែលនិយាយអំពីរឿងនិទានអំពីទេវតា និងអសុរ
+                                    ប៉ះទង្គិចគ្នាដើម្បីស្ដារឡើងវិញនូវសេចក្ដីសណ្ដាប់ធ្នាប់ក្នុងពិភពលោក។
+                                    ការស្ដារនោះអាចធ្វើបានតែដោយការទទួលវិលត្រឡប់មកវិញនូវអាមរិតា (amrita) ឬជាតិអមតៈ
+                                    ដែលជាអេលិចស៊េរនៃជីវិតអមតៈ។ ទេវតា និងអសុរត្រូវតែសហការគ្នាជាមុនសិនដើម្បីបញ្ចេញវា
+                                    ហើយបន្ទាប់មកប្រយុទ្ធគ្នាដើម្បីទទួលបានវាវិញ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/SR/Angkor_Thom.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    អង្គរធំ គឺជាទីក្រុងរដ្ឋបាលខាងក្នុងរបស់រាជវង្សខ្មែរ
+                                    ដែលបានសាងសង់ឡើងដោយព្រះបាទជ័យវរ្ម័នទី៧ ដែលត្រូវបានគេគោរពថាជា "ស្តេចយុទ្ធសិទ្ធ"
+                                    នៅចុងសតវត្សទី១២។ ទីក្រុងនេះល្បីដោយសារប្រាសាទជាច្រើន ជាពិសេសប្រាសាទបាយ័ន។
+
+                                    ទីកន្លែងសំខាន់ផ្សេងទៀតរួមមាន ប្រាសាទបាហ្វួន (Baphuon), ប្រាសាទភិមានអាកាស
+                                    (Phimeanakas), តេរ៉ាសដ្ឋានដើមសត្វដំរី (Terrace of the Elephants) និង
+                                    តេរ៉ាសស្ដេចគ្រួសរោម (Terrace of the Leper King)។
+
+                                    ទីក្រុងអង្គរធំអាចចូលដំណើរការបានតាមច្រកចូលប្រាំ ដែលមាននៅទិសទាំងបួន និងច្រកជ័យជំនះ
+                                    (Victory Gate) នៅជញ្ជាំងខាងកើត។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/SR/Siem_Reap_Museum.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    វិទ្យាស្ថានជាតិអង្គរ ត្រូវបានបើកជាផ្លូវការ នៅថ្ងៃទី ១២ ខែវិច្ឆិកា ឆ្នាំ ២០០៧
+                                    ដោយមានគោលបំណងផ្តល់ឱ្យភ្ញៀវទេសចរយល់ដឹងបានល្អប្រសើរជាងមុនអំពីទ្រព្យសម្បត្តិបុរាណវិទ្យានៃតំបន់អង្គរ។
+                                    វិទ្យាស្ថាននេះបង្ហាញពី “យុគមាសនៃអាណាចក្រខ្មែរ”
+                                    ដោយប្រើប្រាស់បច្ចេកវិទ្យាពហុមេឌាថ្មីទំនើបបំផុត។
+
+                                    វិទ្យាស្ថានមានបង្ហាញអំពីប្រវត្តិសាស្ត្រ អរិយធម៌
+                                    និងមរតកវប្បធម៌ខ្មែរតាមរយៈសាលាដិតតាំងចំនួន៨។ នៅសព្វថ្ងៃ
+                                    វិទ្យាស្ថានត្រូវបានពោរពេញដោយគ្រឿងអលង្ការដ៏ថ្លៃថ្នូរដែលត្រូវបានលក់ជូនភ្ញៀវទេសចរបរទេស។
+
+                                    លើសពីនេះ វិទ្យាស្ថានជាតិអង្គរនេះក៏ជាទីកន្លែងពេញនិយមសម្រាប់ភ្ញៀវទេសចរខ្មែរផងដែរ
+                                    នៅពេលបុណ្យឈប់សម្រាកសំខាន់ៗ ដូចជាពេលបុណ្យចូលឆ្នាំខ្មែរ និងបុណ្យគ្រីស្មាស។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ខេត្តសៀមរាបគឺជាអតីតខេត្តខ្មែរមួយឈ្មោះថាខេត្តមហានគរ។ការប្ដូរឈ្មោះជាខេត្តសៀមរាបនេះគឺនៅក្នុងរជ្ជកាលព្រះបាទច័ន្ទរាជា។នៅក្នុងឆ្នាំ
+                                ១៥៣០ គ.ស(តាមពង្សាវតារ)មូលហេតុបានជាផ្លាស់ប្ដូរឈ្មោះខេត្តនេះបានបញ្ជាក់ថានៅក្នុងឆ្នាំ ១៥៣០
+                                គ.សស្ដេចអយុធ្យាបានបញ្ជាឲ្យកងទ័ពខ្លួនវាយលុកកម្ពុជានៅខេត្តមហានគរដើម្បីបង្ក្រាបការមិនចុះញ៉មរបស់ព្រះបាទច័ន្ទរាជា។ទ័ពសៀមដណ្ដើមខេត្តមហានគរមួយរយៈហើយមេដឹកនាំបានទៅទស្សនាប្រាសាទគួរឲ្យយ៉ាងស្ងប់ស្ងែង។បន្ទាប់មកទ័ពស្ដេចសៀមនេះបានជួបនឹងទ័ពស្ដេចខ្មែរនៅតំបន់អង្គរហើយបានប្រយុទ្ធគ្នាធ្វើឲ្យកងទ័ពសៀមទទួលបរាជ័យយ៉ាងធ្ងន់ធ្ងរ។ក្រោយពីទទួលបានជ័យជំនះមកព្រះបាទច័ន្ទរាជាបានបរិញ្ញាតិ្តឲ្យប្ដូរឈ្មោះខេត្តមហានគរនេះទៅជាខេត្តសៀមរាបវិញដែលមានន័យថាទ័ពសៀមត្រូវបង្ក្រាបឲ្យរាបនៅទីនេះ។[៥]
+
+                                អ្នក​ប្រវត្តិសាស្ត្រ​នៃ​ប្រទេស​កម្ពុជាបាន​ពន្យល់​ប្រហាក់​ប្រហែល​គ្នា​ថាពាក្យសៀមគឺ​ទាក់ទង​នឹង​ជាតិសាសន៍មួយដែល​បច្ចុប្បន្ន​បាន​ប្រែ​ឈ្មោះ​ទៅ​ជាថៃទៅ​ហើយ។រីឯ​ពាក្យ​ថារាបគឺ​មាន​ន័យ​ថា
+                                ចាញ់ខ្លបខ្លាច។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                វិស័យទេសចរណ៍ គឺជាផ្នែកដ៏សំខាន់បំផុតមួយនៃសេដ្ឋកិច្ចខេត្តសៀមរាប។ តាមការប៉ាន់ស្មាននៅឆ្នាំ
+                                ២០១០ មានការងារជាង ៥០% នៅក្នុងទីក្រុង ដែលពាក់ព័ន្ធនឹងឧស្សាហកម្មទេសចរណ៍។
+                                បន្ទាប់ពីសម័យខ្មែរក្រហម
+                                ចំនួនភ្ញៀវទេសចរបានកើនឡើងយ៉ាងច្រើនក្នុងរយៈពេលប៉ុន្មានទសវត្សរ៍បន្ទាប់មក
+                                ហើយអាជីវកម្មដែលផ្អែកលើទេសចរណ៍ក៏រីកចម្រើនដល់កម្រិតខ្ពស់
+                                ដោយសារការរីកចម្រើននៃវិស័យទេសចរណ៍នេះ។
+
+                                ចំនួនភ្ញៀវនៅទសវត្សរ៍ឆ្នាំ ១៩៩០ នៅតែតិចតួចណាស់ ប៉ុន្តែនៅឆ្នាំ ២០០៤
+                                មានភ្ញៀវបរទេសជាងកន្លះលាននាក់បានមកដល់ខេត្តសៀមរាប ដែលគិតជាប្រហែល ៥០%
+                                នៃភ្ញៀវបរទេសទាំងមូលដែលមកប្រទេសកម្ពុជានៅឆ្នាំនោះ។ ចំណែកនៅឆ្នាំ ២០១២
+                                ចំនួនភ្ញៀវទេសចរបានកើនដល់ជាងពីរលាននាក់។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Siem Reap</h1>
 </body>
+
 </html>

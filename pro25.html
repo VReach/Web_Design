@@ -1,17 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Pursat</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Pursat_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តពោធិ៍សាត់ជាខេត្តមួយនៅភាគខាងលិចនៃប្រទេសកម្ពុជា។ ខេត្តពោធិ៍សាត់មានទីរួមខេត្តនៅ
+                                ក្រុងពោធិ៍សាត់។ ខេត្តពោធិ៍សាត់គឺជាខេត្តមួយដែលសិ្ថតនៅក្នុងតំបន់បឹងទនេ្លសាប
+                                មានទីតាំងនៅទិសបចិ្ចមនៃប្រទេស។ ខេត្តពោធិ៍សាត់មានប្រជារាស្ត្រ ៣៦០ ៤៤៥ នាក់ ក្នុងនោះ ប្រុស
+                                ១៧២ ៨៩០ នាក់ ស្រី ១៨៧ ៥៥៥ នាក់ ។ ស្រ្តី ៥២,០ ភាគរយនៃប្រជារាស្ត្រសរុបក្នុងខេត្ត [២]។
+                                ស្ថិតនៅភាគខាងលិចនៃប្រទេស និងមានព្រំប្រទល់ពីខាងជើងជាប់ខេត្តបាត់ដំបង បឹងទន្លេសាប
+                                ខាងលិចជាប់ខេត្តកំពង់ឆ្នាំង ខាងត្បូងជាប់នឹងខេត្តកំពង់ស្ពឺ ខេត្តកោះកុង
+                                និងខាងលិចជាប់នឹងប្រទេសថៃ។ ហើយក៏ស្ថិតនៅចន្លោះ បឹងទន្លេសាប និងចុងខាងជើងនៃជួរភ្នំក្រវាញ។
+                                ទន្លេ​ពោធិសាត់​កាត់​ខេត្ត​នេះ​ហូរ​ពី​ជួរ​ភ្នំក្រវាញ​នៅ​ភាគ​ខាងលិច​ទៅ​ទន្លេសាប​ខាង​កើត។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/PST/Neak_Ta_Kleang_Meoung.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ​បូជនីយដ្ឋាន​អ្នកតា​ឃ្លាំងមឿងជាបូជនីដ្ឋាន​ប្រវត្តិសាស្ត្រ​​និង​ជាទី​សក្ការបូជា​របស់​ប្រជាជន​ខ្មែរ
+                                    ស្ថិត​ត​នៅ​ចម្ងាយ​៦​គីឡូម៉ែត្រ​ពី​ទីរួមខេត្ដ ក្នុង​ឃុំ​ស្នាម​ព្រះ ស្រុកបាកាន​។
+                                    ទី​នេះ​ជា​តំបន់​ប្រវត្ដិសាស្ដ្រ​មួយ​យ៉ាង​សំខាន់
+                                    ជា​តំបន់​ដែល​រំលឹក​ឡើង​វិញ​ចំពោះ​វីរភាពអង់អាច​ក្លាហាន
+                                    ហ៊ាន​បូជាជីវិត​របស់​បុព្វបុរស​ខ្មែរ​យើង ក្នុង​បុព្វហេតុ​ការពារ​ទឹកដី មាតុភូមិ
+                                    ពី​ពួក​ចោរ​ឈ្លានពាន​។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/PST/BakTra.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ​តំបន់​បាក់​ត្រា​ជា​រមណីយដ្ឋាន​ធម្មជាតិ
+                                    មាន​ចម្ងាយ​១៦​គីឡូម៉ែត្រ​ពី​ទីរួមខេត្ដ​តាម​ផ្លូវ​លេខ៥៦​។ រមណីយដ្ឋាន​​នេះ​មានកូនភ្នំ
+                                    មានព្រៃ មាន​ទឹកអូរ​ធម្មជាតិ ដែល​មាន​ទឹកជា​ប្រចាំ
+                                    និង​សម្បូរ​ដោយ​រុក្ខជាតិ​ហូប​ផ្លែ​ព្រៃ​ដូច​ជា គុយ សិរមាន់ ជាដើម​។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/PST/Kapong_Loung.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    កំពង់ហ្លួង​មាន​ទីតាំង​ស្ថិត​នៅ​​លើ​ផ្ទៃ​បឹង​ទន្លេសាប ក្នុង ​ឃុំកំពង់ហ្លួង
+                                    ស្រុក​ក្រគរ ចម្ងាយ​៣៥​គីឡូម៉ែត្រ​ពី​ទីរួមខេត្ដ​។
+                                    តំបន់​នេះ​មាន​ជ្រោយ​ខ្សាច់​ដែល​ជា​ទី​សំរាប់​ងូត​ទឹក​លេង​កំសាន្ត​នៅ​រដូវ​ប្រាំង​នៃ​ផ្ទៃ​បឹង​ទន្លេ​សាប។
+                                    ចំណែក​នៅ​រដូវ​វស្សា​វិញ ជា​ពិសេស​ពេល​បុណ្យភ្ជុំបិណ្ឌ
+                                    គេ​ឃើញ​មាន​ប្រជាជន​នាំ​គ្នា​លេងល្បែង​កំសាន្តចោល​ទឹកល័ក្ខ​ដាក់គ្នាលើ​ផ្ទៃ​បឹង​ទន្លេសាប។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                តាម​ពាក្យ​ពី​ព្រេងនាយ​ដំណាល​ថា មាន​ដើម​ពោធិ៍​មួយ​ដើម​រសាត់​ច្រាស​ទឹក​ដ៏​ប្លែក​អស្ចារ្យ
+                                ឃើញ​ដូច្នេះ​អ្នក​ស្រុក​ក៏​នាំ​គ្នា​យក​ខ្សែ​ពួរ​ទៅ​ទាក់​ចង​តែ​មិន​ជាប់
+                                ហើយ​បន្ត​រសាត់​ដល់​កន្លែង​មួយ​ត្រង់​ខាង​មុខ​ទី​ប្រាសាទ​ព្រះខ័ន។ រសាត់​មក​ដល់​ទី​នេះ
+                                ព្រះសង្ឃ និង​អ្នក​ស្រុក បាន​រៀបចំ​គ្រឿង​ពលីការ​បូជា​ទៀន ធូប ផ្កាភ្ញី
+                                ដោយ​អធិដ្ឋាន​បួង​សួង​សុំ​យាង​ដើម​ពោធិ៍ ដើម្បី​ប្រតិដ្ឋាន​ដាំ​ទុក​នៅ​ទីតាំង​នោះ។<br><br>
+
+                                ព្រះសង្ឃ​បាន​យក​ខ្សែ​អំបោះ ៧​សរសៃ​ទៅ​ចង​ដើម​ពោធិ៍​
+                                រួច​ប្រគំភ្លេង​ពិណពាទ្យ​ថ្វាយ​ដើម​ពោធិ៍ ស្រាប់​តែ​ដើម​ពោធិ៍​នោះ
+                                ត្រូវ​បាន​អ្នក​ស្រុក​អូស​តាម​ជម្រាល​ដី​ឡើង​ច្រាំង​ខាង​កើត​ប្រាសាទ​ព្រះខ័ន បាន​ដោយ​ងាយ។
+                                អ្នក​ស្រុក​ក៏​ស្រែក​អឺងកង​ឡើង​ថា "បានការ...បានការ" ហើយ​ទួល​នេះ​បាន​ជាប់​ឈ្មោះ
+                                "ទួល​បានការ" ត​រៀង​មក ដែល​បច្ចុប្បន្ន​ទួល​នេះ ឋិត​នៅ​ខាង​កើត​វត្ត​បាកាន
+                                ក្នុង​ទឹកដី​ស្រុក​បាកាន។<br><br>
+
+                                ដោយសារ​ប្រាសាទ​ព្រះខ័ន មាន​បារមី​ខ្លាំង​ពូកែ និង​បួងសួង​សុំ​កំណប់​ទ្រព្យ​អ្វី​បាន​នោះ
+                                ដំណឹង​បាន​លេច​ឮ​ដល់​កងទ័ព​សៀម ដែល​នៅ​ក្បែរ​ព្រំដែន​ស្វាយដូនកែវ
+                                និង​ចង់​មក​ជីក​យក​វត្ថុ​មាន​តម្លៃ​ទាំង​នោះ។ អ្នកស្រុក
+                                និង​ព្រះសង្ឃ​ក៏​នាំ​គ្នា​លើក​ដី​ពូន​លុប​ប្រាសាទ
+                                ក្នុង​បំណង​លាក់​ទុក​អាថ៌កំបាំង​ដោយ​យក​ដើម​ពោធិ៍​ទៅ​ដាំ​លើ​ចំហៀង​កូន​ភ្នំ
+                                និង​ប្ដូរ​ឈ្មោះ​មក​ជា "បាកាន" វិញ ដែល​បច្ចុប្បន្ន​គេ​ហៅ​ថា ស្រុក​បាកាន។<br><br>
+
+                                ក្រៅ​ពី​ខ្លឹមសារ​ដក​ស្រង់​ចេញ​ពី​សៀវភៅ​កម្ពុជសុរិយា​ឆ្នាំ​២០០៣ ត្រង់​ទំព័រ ៦២​នេះ
+                                នៅ​ក្នុង​វចនានុក្រម​សម្ដេច​សង្ឃរាជ ជួន ណាត ត្រង់​ទំព័រ ៧៧៩ បញ្ជាក់​ថា ពោធិ៍សាត់
+                                គឺ​ជា​ឈ្មោះ​ខេត្ត​មួយ​ក្នុង​កម្ពុជា​រដ្ឋ នៅ​ជាប់​ខាង​កើត​ខេត្ត​បាត់ដំបង។
+                                តាម​ពាក្យ​ដំណាល​ពី​ព្រេងនាយ​ថា
+                                មាន​ដើម​ពោធិ៍​តូច​មួយ​រសាត់​ច្រាស​ទឹក​មក​ជា​អស្ចារ្យ​ប្លែក
+                                ហើយ​គេ​បាន​ស្រង់​យក​ទៅ​ដាំ​នៅ​កន្លែង​មួយ។ ដោយ​ហេតុ​ដូច្នេះ
+                                ទើប​ឲ្យ​ឈ្មោះ​ភូមិ​ប្រទេស​នោះ​ថា ពោធិ៍សាត់ ព្រោះ​ពាក្យ​ថា រសាត់ និង​សាត់
+                                ជា​ពាក្យ​តែ​មួយ​អាច​ប្រើ​ជួស​គ្នា​បាន។ លុះ​សំណេរ​ជា​យូរ​អង្វែង​មក បាន​ក្លាយ​ជា
+                                "ពោធិ៍សាត់" រហូត​ដល់​សព្វថ្ងៃ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                តំបន់សេដ្ឋកិច្ចពិសេសខេត្តពោធិ៍សាត់ ដែលអភិវឌ្ឍន៍លើផ្ទៃដីជាង១០០ហិកតា
+                                បានក្លាយជាទីតាំងដ៏មានសក្តានុពលមួយរបស់ខេត្តពោធិ៍សាត់
+                                ក្នុងការទាក់ទាញក្រុមហ៊ុនធំៗឱ្យទៅបោះទុនវិនិយោគនៅក្នុងខេត្តភាគខាងលិចមួយនេះ។
+                                ក្រៅពីវត្តមានក្រុមហ៊ុនដំឡើងរថយន្តហ្វត ដែលជាក្រុមហ៊ុនដ៏ធំមួយរបស់អាម៉េរិក
+                                ក្រុមហ៊ុនដំឡើងរថយន្តអគ្គិសនី ហ្សូ ម៉ូធ័រ និងក្រុមហ៊ុនផងគ្រឿងអគ្គិសនីរបស់ជប៉ុន មីនីបៀរ
+                                ក៏បានទៅបោះទុនវិនិយោគនៅក្នុងតំបន់សេដ្ឋកិច្ចពិសេសនេះផងដែរ។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Pursat</h1>
 </body>
+
 </html>

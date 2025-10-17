@@ -1,17 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Svay Rieng</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Svay_Rieng_locator_map.svg_-1.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ស្វាយរៀងជាមួយខេត្តមួយនៃព្រះរាជាណាចក្រកម្ពុជា ដែលស្ថិតនៅភាគនិរតីនៃប្រទេស ប្រមាណ ១២៥
+                                គីឡូម៉ែត្រពីភ្នំពេញ តាមផ្លូវជាតិលេខ១។ ខេត្តនេះមានផ្ទៃដីសរុប ២,៩៦៦.៤០ គីឡូម៉ែត្រការ៉េ
+                                មានព្រំប្រទល់ជាប់នឹងខេត្តព្រៃវែងនៅភាគខាងជើង និងខាងលិច
+                                និងជាប់ព្រំប្រទល់នឹងប្រទេសវៀតណាមនៅភាគខាងត្បូង និងខាងកើត។ ទីតាំងរបស់ខេត្តស្វាយរៀង
+                                ដែលនៅជិតភ្នំពេញ (ប្រហែលម៉ោងពីរកន្លះដំណើរដោយឡាន) និងជាប់ព្រំប្រទល់វៀតណាម
+                                ធ្វើឲ្យខេត្តនេះងាយស្រួលសម្រាប់អ្នកធ្វើដំណើរឆ្លងកាត់។
+                                ទីតាំងយុទ្ធសាស្ត្រនេះអាចជួយគាំទ្រទេសចរណ៍ឆ្លងព្រំដែន និងការទស្សនកិច្ចខ្លីៗពីរាជធានី។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="text">
+                                <p>
+                                    ខេត្តស្វាយរៀង (ជាពិសេសក្រុងបាវិត) ជាច្រកព្រំដែនសំខាន់មួយរវាងប្រទេសកម្ពុជា និងវៀតណាម
+                                    តាមច្រកអន្តរជាតិបាវិត។ វាជាតំបន់សម្រាប់អ្នកធ្វើដំណើរពីភ្នំពេញទៅទីក្រុងហូជីមិញ។
+
+                                    ដោយសារតែទីតាំងនេះ មានសេវាកម្មជាច្រើនសម្រាប់ភ្ញៀវទេសចរ ដូចជា ផ្សារទំនិញគយសេរី
+                                    ភោជនីយដ្ឋាន និងកាស៊ីណូ។
+                                    ក្រុងបាវិតល្បីខាងកាស៊ីណូ និងការកម្សាន្ត។ មនុស្សជាច្រើនមកទីនេះដើម្បីសាកសមបរិយាកាស
+                                    ការលេងល្បែង និងស្នាក់នៅសណ្ឋាគារល្អៗ។
+
+                                    មានផ្សារ និងហាងលក់ទំនិញដែលលក់ទំនិញពីកម្ពុជា និងវៀតណាម
+                                    ដែលទាក់ទាញភ្ញៀវទេសចរដែលចង់ទិញផលិតផលពីទាំងពីរប្រទេស។
+                                    ទីកន្លែងដ៏ល្បីមួយគឺ ព្រៃបាសាក់ (Prey Ba Sak) មានព្រៃ ស្រះ ទន្លេ និងសំណង់ប្រាសាទបុរាណ
+                                    ដែលសាកសមសម្រាប់ដំណើរទស្សនាធម្មជាតិ ថតរូប និងសម្រាកពេលវេលា។
+
+                                    លើសពីនេះ ទន្លេវៃកូ (Waiko River) និងទេសភាពជាយក្រុងស្វាយរៀង ក៏មានភាពស្រស់ស្អាតផងដែរ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                តាមប្រភពប្រវត្តិសាស្ត្រខ្លះៗ បណ្ដាផ្ទៃដីនៃខេត្តស្វាយរៀងដំបូងគេ ត្រូវបានគេដឹងថា
+                                សម្បូរទៅដោយដើមឈើច Bamboo និងដើមស្វាយព្រៃ។ ផ្នែកខ្លះជាព្រៃដ៏ដាច់ស្រយាល មានដើមឈើខ្លុង
+                                (Khlong Tree - ឈើខ្លុង), ដើមឈើទាល (Gum Tree - ឈើទាល), ដើមគគីរ (Koki Tree - ដើមគគីរ)
+                                និងព្រៃប្រចាក់ (Pror Chak Forest - ព្រៃប្រចាក់) ហើយមានដើមឈើផ្លែតិចតួចប៉ុណ្ណោះ។
+                                តាមរឿងព្រេងនិទានខ្លះៗ បន្ទាប់ពីសង្គ្រាម ឧត្តមសេនី
+                                និងទាហានដែលបានបាំងស្នាក់នៅវត្តព្រះនាងជៅ ដែលជាមហាកញ្ញារបស់ព្រះបាទជ័យជេដ្ឋាទី២
+                                បានដាំដើមស្វាយចំនួន ៧ ប្រភេទ ដែលប្រជាជនហៅថា “ស្វាយប្រាំពីរ” មានដូចជា ស្វាយក្បាលដំរី,
+                                ស្វាយខ្ទិះ, ស្វាយផ្អែម, ស្វាយកែវមួង, ស្វាយព្រៃ, ស្វាយកែវយក្ស និងស្វាយពុំសែន។
+
+                                ក្រោយមក ទាហាន និងមន្ត្រីដែលបានបោះជំរុំនៅតំបន់ស្វាយទៀប រំដួល និងរូងដំរី
+                                បានប្រមូលផ្លែស្វាយទាំងនេះមកបរិភោគ ហើយរក្សាគ្រាប់ដើម្បីដាំនៅកន្លែងជំរុំ
+                                និងតំបន់ស្នាក់នៅរបស់ពួកគេក្រោយចូលនិវត្តន៍។ ដើមស្វាយ (ជាភាសាខ្មែរ “ស្វាយ”)
+                                ភាគច្រើនតែងតែដាំនៅតំបន់ព្រំថ្ម ឬក្បែរវត្តបុរាណ ដូច្នេះឈ្មោះភូមិ ឃុំ ស្រុក និងវត្តជាច្រើន
+                                តែងមានពាក្យ “ស្វាយ” បញ្ចូលនៅក្នុងឈ្មោះផងដែរ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                ការដាំស្រូវជាជីវភាពសំខាន់បំផុតរបស់ប្រជាពលរដ្ឋភាគច្រើន។
+                                ក្រៅពីនេះ ក៏មានការដាំបន្លែ បន្លែតូចៗ ការនេសាទ និងការចិញ្ចឹមសត្វ។
+                                ខេត្តស្វាយរៀងក៏មានការអភិវឌ្ឍឧស្សាហកម្មកសិកម្ម ដូចជា
+                                ការកែច្នៃផលិតផលកសិកម្មកាន់តែច្រើនឡើងផងដែរ។
+                                ខេត្តស្វាយរៀងមានតំបន់សេដ្ឋកិច្ចពិសេសជាច្រើន ដែលមានរោងចក្រ
+                                និងសហគ្រាសអន្តរជាតិដំណើរការជាច្រើន។
+                                រោងចក្រទាំងនេះផលិតសម្លៀកបំពាក់ ស្បែកជើង គ្រឿងសង្ហារឹម ផលិតផលអេឡិចត្រូនិច សំបកកង់
+                                និងផលិតផលឧស្សាហកម្មស្រាលផ្សេងៗ។
+                                ព្រំដែនជាប់ប្រទេសវៀតណាម ជាពិសេសតាមច្រកបាវិត ជាប្រភពសេដ្ឋកិច្ចសំខាន់សម្រាប់ខេត្ត។
+
+                                នៅឆ្នាំ ២០២២ ចំណូលពន្ធពីច្រកព្រំដែនក្នុងខេត្តស្វាយរៀងមានប្រមាណជាង ៤០០ លានដុល្លារអាមេរិក។
+                                មានការសាងសង់ និងបន្តអភិវឌ្ឍផ្លូវ ស្ពាន
+                                និងប្រព័ន្ធស្នូលស្រែសម្រាប់ធានាប្រសិទ្ធភាពក្នុងការដាំស្រូវ និងដឹកជញ្ជូន។
+
+                                មានការវិនិយោគលើហេដ្ឋារចនាសម្ព័ន្ធនៅតំបន់សេដ្ឋកិច្ចពិសេស ដូចជា ភ្លើង ផ្លូវ
+                                និងសាងសង់រោងចក្រ ដើម្បីទាក់ទាញវិនិយោគកម្មជាតិ និងអន្តរជាតិ។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Svay Rieng</h1>
 </body>
+
 </html>

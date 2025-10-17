@@ -1,17 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-     <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Prey Veng</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Prey_Veng_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តព្រៃវែង គឺជាខេត្តមួយនៃប្រទេសកម្ពុជា
+                                ខេត្តព្រៃវែងជាខេត្តមួយដែលស្ថិតនៅតំបន់ទំនាបកណ្ដាលជាខេត្តដែលផលិតស្រូវច្រើនជាងគេក្នុងប្រទេសកម្ពុជា
+                                ខេត្តព្រៃវែងជាខេត្តមួយដែលមានចំនួនប្រជាជន១.១ លាននាក់ច្រើនជាងគេទី៣នៅក្នុងប្រទេសកម្ពុជា
+                                ខេត្តព្រៃវែងជាប់នឹងដងទន្លេមេគង្គដែលអំណោយផលក្នុងវិស័យកសិកម្មផងដែរ។
+                                ខេត្តព្រៃវែង មានទីតាំងនៅភាគនិរតីនៃទន្លេមេគង្គដ៏មានសក្ដានុពល។
+                                ហើយខេត្តព្រៃវែងមានទីរួមខេត្តមួយគឺ ក្រុងព្រៃវែង ។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់ទេសចរណ៍សក្តានុពល</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/PreyV/unnamed.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    រមណីយដ្ឋាន​គំរូ​ស្ថិត​នៅ​ក្នុង​ស្រុក​បាភ្នំ​
+                                    គឺ​ជា​រមណីយដ្ឋាន​​​មួយដែល​មាន​​​​ទេសចរ​ជា​ច្រើន​​​​​មក​ពី​តំបន់​​ផ្សេងៗ​ជួបជុំគ្នា​ដើម្បី​ប្រារព្ធ​ធ្វើ​ពិធី​សាសនា​តាម​លទ្ធិព្រាហ្មណ៍​​មួយ
+                                    គឺ បុណ្យ​ឡើងអ្នកតាមេសរ ដែល​មាន​រយៈពេល ៣ ថ្ងៃ ។ ប្រជាជន​តែង​ប្រារព្ធ​ធ្វើ​បុណ្យ​ឡើង
+                                    អ្នកតាមេសរ រៀងរាល់ឆ្នាំ ព្រោះ​ពិធី​នេះ​​គឺ​ជា​ទំនៀមទម្លាប់​មាន​តាំងពី​បុរាណ ។
+                                    ប្រជាជន​ខ្មែរ​​តែង​នាំគ្នា​ប្រារព្ធធ្វើ​ពិធី​នេះ​​ដើម្បី​រំលឹក​​គុណបុព្វបុរស
+                                    ដើម្បី​សុំ​សេចក្ដីសុខ​ សុំទឹកភ្លៀង និង
+                                    ជាពិសេស​ដើម្បី​សុំ​​អ្នកតា​មេសរ​​ជួយការពារ​​​សុវត្ថិភាព​ និង សន្តិសុខ​ជូន​​ប្រជាជន ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/PreyV/ប្រាសាទព្រះវិហារច័ន្ទ-1.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    មានប្រាសាទមួយដែលសល់ដានដល់សព្វថ្ងៃ នោះគឺប្រាសាទព្រះវិហារច័ន្ទ ស្ថិតក្នុងភូមិរោងដំរី
+                                    ឃុំជើងភ្នំស្រុកបាភ្នំ ខេត្តព្រៃវែង។ ប្រាសាទនេះ
+                                    ត្រូវបានបំផ្លាញស្ទើរទាំងស្រុងក្នុងរបបប្រល័យពូជសាសន៍ខ្មែរក្រហម ហើយនៅទសវត្សរ៍ឆ្នាំ៩០
+                                    រូបចម្លាក់ទាំង៣ ត្រូវជនខិលខូចលួចកាត់ព្រះកេសយកទៅបាត់ទៀត។ លោក អ៊ុយ រ៉ាស៊ឺង
+                                    ប្រធានការិយាល័យវប្បធម៌ និងវិចិត្រសិល្បៈស្រុកបាភ្នំ បានអះអាងថា
+                                    ប្រាសាទព្រះវិហារច័ន្ទនេះ អាចកសាងឡើងក្នុងចន្លោះពីសតវត្សទី១ ដល់ចុងសតវត្សទី៦
+                                    នៃគ្រិស្តសករាជ ឬអាចរាប់បានថាក្នុងសម័យនគរភ្នំ។ ប៉ុន្តែបើតាមឯកសារមួយចំនួនបានបង្ហាញថា
+                                    ប្រាសាទនេះត្រូវបានស្ថាបនាឡើង នាសម័យអង្គរដើម្បី ឧទ្ទិសចំពោះលទ្ធិព្រហ្មញ្ញសាសនា។
+                                    ចំណែកឯសៀវភៅ ប្រវត្តិស្រុកបាភ្នំ ដែលស្រាវជ្រាវដោយលោក ឡុង គារ ក៏បានបង្ហាញដែរថា
+                                    ថ្មសង់ប្រាសាទវិហារច័ន្ទ មានលក្ខណៈដូចគ្នានឹងថ្មសង់ប្រាសាទអង្គរវត្ត។ ចន្លោះពីឆ្នាំ១៩៧៥
+                                    ដល់ឆ្នាំ១៩៧៩ តួប្រាសាទត្រូវបានបំផ្លិចបំផ្លាញស្ទើរទាំងស្រុង ឯថ្ម និងចម្លាក់ផ្សេងៗ
+                                    ត្រូវបានលួចយកទៅបាត់អស់ ដោយបន្សល់ទុកត្រឹមខឿន ស៊ុំទ្វារចូល និងរូបចម្លាក់ធំ៣។ បើតាមលោក
+                                    លោក អ៊ុយ រ៉ាស៊ឺង បានឲ្យដឹងថា ក្នុងអំឡុងទសវត្សឆ្នាំ៩០ រូបចម្លាក់ទាំង៣
+                                    ត្រូវបានជនខិលខូចលួចកាត់ព្រះកេសយកទៅបាត់ទៀត ប៉ុន្តែគណៈកម្មការ
+                                    បានរៀបចំព្រះកេសថ្មីជំនួសវិញ។ ប្រធានការិយាល័យវប្បធម៌ និងវិចិត្រសិល្បៈស្រុកបាភ្នំ
+                                    បានលើកឡើង បច្ចុប្បន្ន ប្រាសាទដ៏ចំណាស់មួយនេះ
+                                    កំពុងដាក់ក្រោមការការពារយ៉ាងយកចិត្តទុកដាក់បំផុត និងមានឆ្មាំចាំសម្អាតជាប្រចាំ។
+                                    ចំណែកក្រសួងវប្បធម៌ និងវិចិត្រសិល្បៈ
+                                    ក៏បានចុះបញ្ជីប្រាសាទព្រះវិហារច័ន្ទជាសម្បត្តិវប្បធម៌ជាតិ
+                                    ព្រមទាំងផ្សព្វផ្សាយឲ្យជួយការពារផងដែរ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                រាល់​ឆ្នាំ​ខេត្ត​ព្រៃ​វែង​​ទទួល​ដី​ភក់​​ដែល​ទន្លេ ស្ទឹង និង
+                                ព្រែក​មួយ​ចំនួន​នាំ​យក​មក​ចាក់​ក្នុង​ស្រែ​ចម្ការ​​នានា​​នៅ​ក្នុង​រដូវ​វស្សា
+                                ដូច្នោះ​ហើយ​ទើប​ធ្វើ​ឲ្យ​​​តំបន់​នេះ​មាន​ជីជាតិ​ល្អ​ងាយ​ស្រួល​​ដាំដុះ​​ស្រូវ​និង​ដំណាំ​ផ្សេងៗ​​នៅ​ក្នុង​វិស័យ​កសិកម្ម
+                                និង ប្រមូល​ជលផល​​ផ្សេងៗ ។ ខេត្ត​នេះ​ត្រូវ​បាន​​​ទទួល​ស្គាល់​ជាទូទៅ​ថា​ជា​
+                                "ខ្សែ​ក្រវាត់​បៃតង​​ធំ" នៃ​ប្រទេស​កម្ពុជា ។
+                                ធញ្ញជាតិ​សំខាន់​ជាង​គេ​របស់​ខេត្ត​ព្រៃ​វែង​គឺ​ស្រូវ ដែល​ខេត្ត​នេះ​ចូលរួម​ចំនួន ១០
+                                ភាគរយ​នៃ​ផលិតផល​ស្រូវ​សរុប​របស់​ប្រទេស ។ លើស​ពី​នោះ​ទៀត​
+                                ប្រជាកសិករ​នៅ​ក្នុង​ខេត្ត​ព្រៃវែង​ក៏​​ប្រមូល​ផល​​​ថ្នាំ​ជក់ សណ្តែក​បាយ ស្ករ​អំពៅ
+                                ស្ករ​ត្នោត ដំឡូង​ឈើ (ដំឡូង​មី ឬ ដំឡូង​បារាំង) ល្ង និង ផ្លែ​ឈើ​ច្រើន​ប្រភេទ​ទៀត ដូច​ជា​
+                                ដូង ស្វាយ ស្វាយ​ចន្ទី ។ កាលពី​អតីតកាល
+                                ដើម​កៅស៊ូ​ក៏​បាន​ដើរ​តួ​សំខាន់​ផង​ដែរ​នៅ​ក្នុង​សេដ្ឋកិច្ច​នៃ​ខេត្ត​នេះ
+                                ក៏​ប៉ុន្តែ​ចម្ការ​កៅស៊ូក៏ឃើញមាននៅតំបន់ខ្លះក្នុងស្រុកកំចាយមារផងដែរនៅ​ក្នុង​សម័យ​បច្ចុប្បន្ន។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Prey Veng</h1>
 </body>
+
 </html>

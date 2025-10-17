@@ -1,17 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moulpali&family=Suwannaphum:wght@100;300;400;700;900&display=swap');
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url('6pduaokv5mr3z2t786kiuydji_0565.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header {
+        width: 100%;
+        text-align: center;
+        display: flex;
+
+        .return {
+            text-align: left;
+            place-content: center;
+            margin-left: 15px;
+            font-size: 24px;
+
+            a {
+                border: 3px solid white;
+                padding: 12px;
+                border-radius: 50%;
+                color: white;
+            }
+        }
+
+        .title {
+            width: 25%;
+            text-align: center;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+            margin: 0 auto;
+        }
+    }
+
+    .main {
+        width: 100%;
+
+        .info {
+            width: 100%;
+            background-color: #feb47b;
+            padding: 10px 0px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                row-gap: 10px;
+                font-family: "Suwannaphum", serif;
+                font-weight: 600;
+                font-style: normal;
+            }
+
+            li {
+                margin: 10px 15px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    border: 2px solid white;
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+
+                a:hover {
+                    background-color: white;
+                    color: #feb47b;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+            padding: 10px 0px;
+            row-gap: 20px;
+
+            .gen {
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 5px;
+
+                h1 {
+                    font-family: "Moulpali", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: #333;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                    text-decoration: double underline;
+                }
+
+                .about {
+                    display: flex;
+                    padding: 5px 5px;
+
+                    .img {
+                        width: 20%;
+                        height: 300px;
+                        margin: 0px 10px 20px 20px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border: 2px solid #333;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .text {
+                        width: 70%;
+                        margin: 0 auto;
+                        text-align: justify;
+                        font-family: "Suwannaphum", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: 18px;
+                    }
+
+                    #hist {
+                        width: 100%;
+                        padding: 30px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                    }
+                }
+
+                .card {
+                    row-gap: 20px;
+                    padding: 0 20px 20px 20px;
+
+                    .cards {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        border: 2px solid #333;
+                        border-radius: 10px;
+                        background-color: azure;
+                        padding: 5px 5px;
+
+                        .temps {
+                            width: 40%;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+
+                        #right {
+                            order: 2;
+                        }
+
+                        .text {
+                            width: 100%;
+                            font-family: "Suwannaphum", serif;
+                            padding: 5px;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 18px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toparrow {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #feb47b;
+        color: white;
+        border: 3px solid white;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+</style>
+
 <body>
-    <i class="fa fa-arrow-left" aria-hidden="true"></i> <a href="index.html">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <a name="top"></a>
+    <div class="header">
+        <div class="return">
+            <a href="index.html" title="Home Page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="title">
+            <h1>Welcome to Battambang</h1>
+        </div>
+    </div>
+    <div class="main">
+        <div class="info">
+            <ul>
+                <li><a href="#general">លក្ខណៈទូទៅ</a></li>
+                <li><a href="#tourism">តំបន់ទេសចរណ៍សក្តានុពល</a></li>
+                <li><a href="#history">ប្រវត្តិសាស្ត្រ</a></li>
+                <li><a href="#economic">សេដ្ឋកិច្ច</a></li>
+            </ul>
+        </div>
+        <div class="description">
+            <div class="gen">
+                <a name="general">
+                    <h1>លក្ខណៈទូទៅ</h1>
+                    <div class="about">
+                        <div class="img">
+                            <img src="location/Cambodia_Battambang_locator_map.svg.png" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                ខេត្តបាត់ដំបង
+                                គឺជាខេត្តមួយនៅភាគពាយ័ព្យនៃព្រះរាជាណាចក្រកម្ពុជា។ខេត្តបាត់ដំបងមានទីប្រជុំជនធំនៅក្រុងបាត់ដំបង។ខេត្តបាត់ដំបងមានព្រំប្រទល់ខាងជើងជាប់ខេត្តបន្ទាយមានជ័យខាងកើតជាប់ខេត្តសៀមរាបនិងបឹងទន្លេសាបខាងត្បូងជាប់ខេត្តពោធិ៍សាត់ខាងលិចជាប់ខេត្តប៉ៃលិននិងខេត្តច័ន្ទបុរី
+                                ប្រទេសសៀម។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="tourism">
+                    <h1>តំបន់សក្តានុពលទេសចរណ៍</h1>
+                    <div class="card">
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/BTB/Phnom_Banan_temples.JPG" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ប្រាសាទបាណន់​ជា​រចនាបថ​​កណ្តាល​សតវត្សរ៍​ទី ១១ និង ​ចុង​សតវត្សរ៍ទី
+                                    ១២។ព្រះរាជា​ដែល​បាន​កសាង​មុនគេគឺព្រះ​បាទ​ឧទយាទិត្យា​វរ្ម័ន​ទី២ (១០៥០ ដល់ ១០៦៦)
+                                    ក្រោយ​មក​ត្រូវ​បញ្ចប់​ដោយ​ព្រះ​បាទ​ជ័យវរ្ម័នទី៧ (១១៨១​ ដល់
+                                    ១២១៩)។ប្រាសាទ​បាណន់​ត្រូវបានកសាងលើកំពូលភ្នំ​ដែល​មាន​កំពស់​ប្រមាណជាង​ ១០០ម
+                                    ដោយ​មាន​កាំ​ជណ្តើរ​ចំនួន ៣៥២​ កាំស្ថិតនៅក្នុង ​ឃុំ​កន្ទឺ២ ស្រុក​បាណន់​ មានចម្ងាយ​ ២៥
+                                    គម​ ពីទីរួមខេត្ត​តាម​ដង​ផ្លូវ​ខេត្ត​លេខ ​១៥៥​
+                                    ស្រប​តាម​ដង​ស្ទឹងសង្កែ​​ទៅទិស​និរតី។នៅ​ជើងភ្នំ​បាណន់មាន​គូទឹកនិង​ល្អាងសំខាន់​ពីរ​គឺ​ល្អាងព្រះទឹកនិង​ល្អាងបិទមាស។រមណីយដ្ឋាន​ប្រាសាទ​បាណន់​គឺជារមណីយដ្ឋានវប្បធម៌​ប្រវត្តិសាស្ត្រ​ផងនិង​ជារមណីយដ្ឋានធម្មជាតិ​ផងពីព្រោះវាកសាងឡើង​នៅលើ​កំពូលភ្នំប្រកប​ទៅដោយធម្មជាតិ​ព្រៃព្រឹក្សា​ដ៏ស្រស់ត្រកាលព្រមទាំង​មាន​ទឹកស្ទឹងសង្កែ​រួមជាមួយ​ផង។ភូមិសាស្ត្រ​
+                                    និងបរិស្ថាន​ជុំវិញ​បាន​ផ្តល់​អំណោយផល​​បន្ថែមទៀត​លើ​វិស័យ​ទេសចរណ៍ពីព្រោះ​សងខាងដងផ្លូវ​ទៅកាន់​រមនីយដ្ឋាននេះ​សម្បូរ​ទៅ​ដោយ​ភោគ​ផល​ដំ​នាំ​​កសិកម្ម​ដូដូចជាស្រូវជាពិសេសចម្ការក្រូចពោធិ៍សាត់ដ៏ល្បីល្បាញក្នុង​ព្រះរាជាណាចក្រ​កម្ពុជា​មានរសជាតិឆ្ងាញ់។ដំណាំក្រូចផ្តល់ផល​ក្នុង​មួយ​ឆ្នាំ
+                                    ០២ ដងហើយ​បាន​ដឹក​នាំទៅ​លក់​តាម​បណ្តា​ខេត្ត​នានា​និងរាជធានីភ្នំពេញផងដែរ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps" id="right">
+                                <img src="img/BTB/Phnom_Sampeau_cave.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    ភ្នំសំពៅ គឺជារមណីយដ្ឋាន​ធម្មជាតិ​មួយ​​ដែល​ភ្ញៀវ​ទេសចរ​និយម​ទៅ​កំសាន្ត
+                                    ជា​ពិសេស​ភ្ញៀវ​ក្នុង​ស្រុក ក្នុង​ថ្ងៃសំរាក ឫ បុណ្យ​ប្រពៃណី​ផ្សេងៗ
+                                    ដូចជា​បុណ្យ​ចូល​ឆ្នាំ​ខ្មែរ បុណ្យ​ភ្ជុំបិណ្ឌ។ល។
+                                    រមណីយដ្ឋាន​នេះ​មាន​ទី​តាំង​ស្ថិត​នៅតាម​ដង​ផ្លូវ​ជាតិ​លេខ​ ១០​ ខាងឆ្វេង​ដៃ​មាន​ចំងាយ​
+                                    ១៣ គ.ម ពីទីរួមខេត្ត​។​ បើពិនិត្យ​ឱយ​​ម៉ត់​ចត់ ភ្នំនេះ​មាន​ទ្រង់​ទ្រាយ​ដូចជា​សំពៅ
+                                    មាន​កំពស់​ ១០០ ម មាន​កាំ​ជណ្តើរ​​ជាង​៧០០​កាំ។
+                                    ក្នុង​តួ​ភ្នំ​ទាំង​មូល​មាន​ល្អាង​ជា​ច្រើន​
+                                    ប៉ុន្តែ​ល្អាង​សំខាន់ៗ​ដែល​គេ​និយម​ទស្សនា​គឺ​ ល្អាង​ផ្កាស្លា​ ល្អាង​ល្ខោន ល្អាង​អសុក។
+                                    នៅ​លើ​កំពូល​ភ្នំ​មាន​វត្ត​មួយ​ឈ្មោះ​ថា​ វត្តគិរីរម្យ ។ នៅជុំ​វិញ​ក្បែរ​ភ្នំ​សំពៅ​
+                                    មាន​ចង្កោម​ភ្នំ​ផ្សេងៗ​ទៀត​ដែល​មាន​​ទំនាក់​ទំនង​ជាមួយ​គ្នា​ក្នុងរឿង​ព្រេង​ខ្មែរ
+                                    រាជកុល និង​ នាង​រំសាយសក់ ដូចជា​ភ្នំ​ក្តោង ភ្នំ​ក្រពើ ភ្នំ​ទ្រុងមាន់ ភ្នំ​ទ្រុងទា
+                                    ភ្នំ​នាង​រំសាយសក់។ល។​ ដែល​សុទ្ធ​តែ​ជា​រមណីយដ្ឋាន​ធម្មជាតិ។
+                                    ភំ្ន​សំពៅ​ស្ថិត​នៅ​ក្នុង​ភូមិ-ឃុំ​ភ្នំសំពៅ ស្រុកបាណន់។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="temps">
+                                <img src="img/BTB/Kamping_Puy_Lake_Battambang.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    អាង​កំពីងពួយ​បាន​ត្រូវ​កសាង​ឡើង​ក្នុង​របប​កម្ពុជា​ប្រជាធិបតេយ្យ​អំឡុង​ទស្សវត្ស​ទី
+                                    ៧៦ប្រជាជន​ជា​ច្រើន​រយ​ពាន់​អ្នក​ត្រូវ​បាន​ពលី​ក្នុង​ការ​កសាង​អាង​ទឹក​នេះ។
+                                    អាង​កំពីងពួយ​​ស្ថិត​នៅចន្លោះភ្នំពីរ​គឺ ភ្នំគល់ និង​ភ្នំ​តាង៉ែន ក្នុង​ឃុំ​តាគ្រាម​
+                                    ស្រុក​បាណន់​ មាន​ចំងាយ ៣៥ គ.ម ពីទីរួមខេត្ត និង​មាន​ចំងាយ ១៩ គ.ម ពីផ្លូវ​ជាតិលេខ​ ៥៧
+                                    អតីត​ផ្លូវ​ជាតិ​លេខ​ ១០ ត្រង់​ចន្លោះ​ភ្នំ​ក្រពើ​និង​ភ្នំទ្រុង​មាន់។ ទំនប់អាង
+                                    មាន​បណ្តោយ ៧៥០០ ម និង​ទទឹង​មាន​ ១៩០០ម អាច​ផ្ទុក​ទឹក​បាន​ចំនួន​ ១១០.០០០.០០០ ម៉ែតគូប
+                                    នៅ​ក្នុង​រដូវ​វស្សា គឺ​ជា​ប្រភពទឹក​សំរាប់​ស្រោច​ស្រព​
+                                    តាម​សេច​ក្តី​ត្រូវ​ការ​ក្នុង​វិស័យ​កសិកម្ម។
+                                    អាង​​កំពីងពួយ​មិន​គ្រាន់តែ​ផ្តល់​ផល​ប្រយោជន៍​យ៉ាង​ច្រើន​ក្នុងវិស័យ​កសិកម្មតែមួយ​មុខ​ប៉ុណ្ណោះទេ
+                                    ជាពិសេស​លើស​ពី​នេះទៅទៀត​បាន​ផ្តល់​ប្រយោជន៍​យ៉ាង​សំខាន់​បំរើ​ឱ្យ​វិស័យ​ទេសចរណ៍
+                                    គឺ​ជា​រមណីយដ្ឋាន​មួយដែល​ទេសចរណ៍​ជាតិ​និង​អន្តរជាតិ​និយម​ទៅ​លំហែ​យក​ខ្យល់​អាកាស​បរិសុទ្ធ​
+                                    ទស្សនា​ភ្នំ​ និង​មុជទឹក​លេង។
+                                    ប្រជាជន​នៅ​ក្បែរ​អាង​កំពីង​ពួយ​មាន​អាជីវកម្ម​ធ្វើ​ស្រែ​ចំការ​និង​នេសាទ​ត្រី។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="history">
+                    <h1>ប្រវត្តិសាស្ត្រ</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                បើ​តាម​សិលា​ចារឹក​ថ្ម​ប្រាសាទ​ដែល​យើង​មាននិង​បាន​រក​ឃើញ​រហូតមកដល់សព្វ​ថ្ងៃនៅ​មុន​សម័យនិង​សម័យ​អង្គរ​គេពុំ​បាន​​ឃើញ​ចែងឲ្យយើង​ដឹង​ទេថាតើ​សម័យ​នោះមានភូមិ​ស្រុក​ណា​មួយ​ដែល​មាន​ឈ្មោះបាត់​ដំបង​នោះ​ទេ។ប៉ុន្តែ​យើង​ក៏​មិនហ៊ាន​សន្និដ្ឋាន​ថាឈ្មោះ​បាត់​ដំបងនេះ​មាន​ប្រើ​ឬ​មិ​ន​ប្រើ​ក្នុង​សម័យ​នោះ​ដែរ។​ប៉ុន្តែ​ក្នុង​សម័យ​អង្គរ​និង​ក្រោយ​អង្គរ​​តាម​ឯកសារមហា​ជន​ខ្មែរ​មានប្រើ​ឈ្មោះ​ស្រុកបាត់ដំបង។​ហេតុ​អ្វី​បាន​ជា​ហៅ​ឈ្មោះ​បាត់​ដំបងប្រវត្តិ​សាស្ត្រ​សរ​សេរ​លើ​សិលា​ចារិក​មិន​បាន​ឆ្លើយ​ឲ្យ​ដឹង​ឡើយគឺ​មាន​តែ​នៅ​ក្នុង​រឿង​ព្រេង​ប៉ុណ្ណោះ​គឺ​រឿង​តា​ដំបង​ក្រញូង​'ដែលខ្មែរយើង​យល់​​ថា​ជា​រឿង​កើត​មាន​តាំង​ពីសម័យ​អង្គរ​ដែល​បាន​ពន្យល់​ពី​ដើម​ហេតុដែល​នាំ​ឲ្យ​យើង​ហៅ​ឈ្មោះថា​បាត់ដំបង​ឬ​អូរ​ដំបង។ឯឈ្មោះថា​ព្រះ​ដំបងស្តេចរាមាទី១បាន​កំណត់​ឲ្យ​ហៅ​ឈ្មោះ​ភូមិ​សង្កែ​ថា​ជាព្រះ​ដំបង​។
+                                កាល​ពី​មុន​សម័យ​អង្គរនិង​សម័យ​អង្គរ​ភាគ​ខាង​លិចនិង​ភាគ​ពាយ័ព្យ​នៃបឹងទន្លេសាប​គឺ​ជា​ដែន​ដីអ​មោឃ​បុរៈ​និង​ជា​​ដែន​ដី​ភិមៈ​បុរៈ។នៅ​ក្នុងសម័យ​អង្គរ​ដែន​ដី​ឬ​ភូមិ​ភាគ​អមោឃ​បុរី​មាន​ការ​រីកចម្រើនខ្លាំង​ដោយ​សារដី​មាន​ជីវជាតិ​ល្អអាច​ដាំ​ដំណាំ​ស្រូវ​និង​បន្លែ​ផ្លែ​ឈើ​ផ្សេង​ៗ​បានប្រកប​ដោយ​ទិន្ន​ផល​ល្អ​ប្រសើរ។ប្រជា​ពល​រដ្ឋ​ខ្មែរ​ជំនាន់​នោះ​មក​រស់​នៅ​ភូមិ​ភាគ​នេះ​​ច្រើនដែលជា​ភស្តុតាង
+                                ​បង្ហាញគឺ​មាន​ប្រា​សាទ​បុរាណ​ជា​ច្រើន​សន្ធឹក​សន្ធាប់​ក្នុង​តំបន់​នេះ។ប៉ុន្តែ​ប្រាសាទ​បុរាណ​ទាំងនោះត្រូវបានរលំ​បាក់​បែក​បាត់​បង់​ស្ទើរ​តែ​ទាំង​អស់លើក​លែង​តែតែប្រាសាទបាណន់
+                                ប្រាសាទ​ឯក​ភ្នំ ប្រាសាទបាសែត ប្រាសាទ​ស្នឹងលិច-កើត ប្រាសាទបន្ទាយ​​ទ័យ
+                                ប្រាសាទដូនទ្រី។​ល​។ដែលនា​ម៉ឺនសព្វ​មុខ​មន្ត្រី​និង​ប្រជា​រាស្ត្រ​ជំនាន់​នោះ​បាន​កសាងឡើងសម្រាប់ជា​ទី​សក្ការៈ​បូជា​ដល់​ព្រះ​​អាទិ​ទេព​និងព្រះពោធិសត្វផ្សេង​ៗខាង​ព្រហ្មញ្ញ​សាសនានិងព្រះពុទ្ធ​សាសនា។នៅ​សតវត្ស​រ៍ក្រោយ​មក​ទៀតដែន​ដី​ខេត្ត​បាត់ដំបង​ត្រូវ​បាន​ទទួល​រង​គ្រោះ​យ៉ាង​ធ្ងន់​ធ្ងរ​ពី​ចម្បាំងរាំង​ជល់ដោយ​ការ​ឈ្លាន​​ពាន​ពីសំ​ណាក់​ពួក​សៀម​តាំង​ពី​សត​វត្សរ៍
+                                ១៥-១៦-១៧-១៨
+                                ​ធ្វើឲ្យជីវភាពរស់​នៅ​របស់​ប្រជាជន​បាត់ដំបង​ជំនាន់​នោះ​ធ្លាក់​​ក្រលំ​បាក​ព្រាត់ប្រាស់និរាសគ្រួសារទ្រព្យសម្បត្តិផ្ទះ​សម្បែង​គួរ​អោយ​ខ្លោច​ផ្សាក្រៃលែង។
+                            </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="gen">
+                <a name="economic">
+                    <h1>សេដ្ឋកិច្ច</h1>
+                    <div class="about">
+                        <div class="text" id="hist">
+                            <p>
+                                សក្តានុពលសេដ្ឋកិច្ចរបស់ខេត្តបាត់ដំបង គឺពឹងផ្អែកលើវិស័យកសិកម្មជាចម្បងដោយ
+                                សារតែខេត្តមួយនេះមានកត្តាអំណោយផលពីធម្មជាតិ អាកាសធាតុ សណ្ឋានដី និងដីដែល មានជីវជាតិខ្ពស់
+                                និងប្រព័ន្ធស្រោចស្រពមានច្រើនកន្លែងសម្រាប់បម្រើដល់វិស័យកសិកម្ម
+                                ជាពិសេសលើដំណាំស្រូវដែលខេត្តបាត់ដំបង បាននាំអង្ករចេញក្រៅប្រទេសមានកំណើន ខ្ពស់។
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <a href="#top" title="up to top" id="toparrow">
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <h1>Welcome to Battambang</h1>
 </body>
+
 </html>
